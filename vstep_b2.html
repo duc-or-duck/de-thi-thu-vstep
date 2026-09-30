@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VSTEP B2 – Đề thi thử đầy đủ (Reading ×2 • Grammar 30 • Writing Task 1 & 2)</title>
+<style>
+  :root{
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+    --accent:#7c3aed;
+    --green:#16a34a;
+    --green-bg:#dcfce7;
+    --red:#dc2626;
+    --red-bg:#fee2e2;
+    --amber:#f59e0b;
+    --amber-bg:#fffbeb;
+    --bg:#eef2f7;
+    --card:#ffffff;
+    --text:#1e293b;
+    --muted:#64748b;
+    --border:#e2e8f0;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    font-family:"Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .page{
+    max-width:980px;
+    margin:0 auto;
+    padding:24px 16px 90px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(135deg,#2563eb 0%, #7c3aed 100%);
+    color:#fff;
+    border-radius:20px;
+    padding:38px 34px;
+    margin-bottom:28px;
+    box-shadow:0 18px 40px -18px rgba(37,99,235,.65);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    right:-60px; top:-60px;
+    width:240px; height:240px;
+    background:rgba(255,255,255,.12);
+    border-radius:50%;
+  }
+  .hero-tag{
+    display:inline-block;
+    margin:0 0 12px;
+    background:rgba(255,255,255,.2);
+    border:1px solid rgba(255,255,255,.35);
+    padding:4px 14px;
+    border-radius:999px;
+    font-size:.78rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  .hero h1{
+    margin:0 0 8px;
+    font-size:2rem;
+    line-height:1.25;
+    letter-spacing:-.02em;
+  }
+  .hero-sub{
+    margin:0 0 6px;
+    font-size:1.02rem;
+    opacity:.95;
+  }
+  .hero-note{
+    margin:0;
+    font-size:.88rem;
+    opacity:.82;
+  }
+  .hero-rules{
+    margin:14px 0 0;
+    padding:10px 14px;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:12px;
+    font-size:.85rem;
+    line-height:1.55;
+  }
+  .hero-rules strong{ color:#fef08a; }
+
+  /* ---------- CARD ---------- */
+  .card{
+    background:var(--card);
+    border-radius:18px;
+    padding:28px 26px;
+    margin-bottom:26px;
+    box-shadow:0 4px 24px -12px rgba(15,23,42,.18);
+    border:1px solid rgba(226,232,240,.9);
+  }
+
+  .section-title{
+    margin:0 0 6px;
+    font-size:1.25rem;
+    letter-spacing:.02em;
+    color:var(--primary-dark);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .section-title::before{
+    content:"";
+    width:6px; height:24px;
+    border-radius:4px;
+    background:linear-gradient(180deg,var(--primary),var(--accent));
+    display:inline-block;
+  }
+  .section-desc{
+    color:var(--muted);
+    font-size:.9rem;
+    margin:0 0 22px;
+    padding-left:16px;
+  }
+
+  .instruction{
+    color:var(--muted);
+    font-size:.94rem;
+    margin:0 0 20px;
+    padding-left:16px;
+  }
+
+  /* ---------- PASSAGE ---------- */
+  .passage{
+    background:#f8fafc;
+    border:1px solid var(--border);
+    border-left:5px solid var(--primary);
+    border-radius:12px;
+    padding:20px 22px;
+    margin-bottom:26px;
+  }
+  .passage h3{
+    margin:0 0 14px;
+    font-size:1.1rem;
+    color:var(--primary-dark);
+  }
+  .passage p{
+    margin:0 0 12px;
+    text-align:justify;
+    font-size:.97rem;
+  }
+  .passage p:last-child{ margin-bottom:0; }
+
+  .passage-tag{
+    display:inline-block;
+    background:#dbeafe;
+    color:#1e40af;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.05em;
+    padding:3px 10px;
+    border-radius:999px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+
+  /* ---------- QUESTIONS ---------- */
+  .question{
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:18px 18px 16px;
+    margin-bottom:18px;
+    transition:border-color .25s, box-shadow .25s, background .25s;
+    background:#fff;
+  }
+  .question.is-correct{
+    border-color:var(--green);
+    background:#f6fef9;
+  }
+  .question.is-wrong{
+    border-color:var(--red);
+    background:#fff7f7;
+  }
+  .question.is-missing{
+    border-color:var(--amber);
+    background:#fffbeb;
+  }
+
+  .q-text{
+    margin:0 0 14px;
+    font-weight:600;
+    font-size:.99rem;
+  }
+  .q-num{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:28px;
+    height:26px;
+    padding:0 6px;
+    margin-right:8px;
+    border-radius:8px;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    color:#fff;
+    font-size:.78rem;
+    font-weight:700;
+    vertical-align:middle;
+  }
+
+  .options{ display:flex; flex-direction:column; gap:8px; }
+
+  .option{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    padding:10px 14px;
+    border-radius:10px;
+    border:1.5px solid transparent;
+    background:#f8fafc;
+    cursor:pointer;
+    transition:background .18s, border-color .18s, transform .12s;
+    font-size:.95rem;
+  }
+  .option:hover{
+    background:#eef2ff;
+    border-color:#c7d2fe;
+  }
+  .option input[type="radio"]{
+    margin-top:4px;
+    accent-color:var(--primary);
+    width:17px; height:17px;
+    flex-shrink:0;
+    cursor:pointer;
+  }
+  .opt-key{
+    font-weight:700;
+    color:var(--primary-dark);
+    flex-shrink:0;
+  }
+  .option.correct{
+    background:var(--green-bg);
+    border-color:var(--green);
+  }
+  .option.correct .opt-key{ color:var(--green); }
+  .option.wrong{
+    background:var(--red-bg);
+    border-color:var(--red);
+  }
+  .option.wrong .opt-key{ color:var(--red); }
+  .option input[type="radio"]:disabled{ cursor:default; }
+
+  /* ---------- EXPLANATION ---------- */
+  .explanation{
+    margin-top:14px;
+    background:var(--amber-bg);
+    border-left:4px solid var(--amber);
+    border-radius:10px;
+    padding:14px 16px;
+    font-size:.92rem;
+    color:#78350f;
+    animation:fadeIn .35s ease;
+  }
+  .explanation p{ margin:0 0 8px; }
+  .explanation p:last-child{ margin-bottom:0; }
+  .explanation strong{ color:#b45309; }
+  .exp-answer{
+    display:inline-block;
+    background:var(--amber);
+    color:#fff;
+    font-weight:700;
+    padding:2px 10px;
+    border-radius:6px;
+    font-size:.85rem;
+    margin-bottom:8px;
+  }
+
+  @keyframes fadeIn{
+    from{ opacity:0; transform:translateY(-6px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+
+  /* ---------- DETAILS / EXTRA (HINTS) ---------- */
+  details.extra{
+    margin-top:24px;
+    border:1px dashed #c7d2fe;
+    border-radius:12px;
+    background:#f5f7ff;
+    padding:14px 18px;
+  }
+  details.extra summary{
+    cursor:pointer;
+    font-weight:700;
+    color:var(--primary-dark);
+    font-size:.95rem;
+    list-style:none;
+  }
+  details.extra summary::-webkit-details-marker{ display:none; }
+  details.extra summary::before{
+    content:"▸ ";
+    font-size:1rem;
+  }
+  details.extra[open] summary::before{ content:"▾ "; }
+  details.extra > *:not(summary){ margin-top:14px; }
+
+  /* Khoá gợi ý trước khi nộp bài */
+  details.extra.is-locked{
+    display: none !important;
+  }
+  .lock-notice{
+    margin-top:22px;
+    background:linear-gradient(135deg,#f1f5f9,#e2e8f0);
+    border:1px dashed #94a3b8;
+    border-radius:12px;
+    padding:14px 18px;
+    color:#475569;
+    font-size:.9rem;
+    text-align:center;
+    line-height:1.55;
+  }
+  .lock-notice strong{ color:#1e293b; }
+  .lock-notice .lock-emoji{
+    display:inline-block;
+    margin-right:6px;
+    font-size:1.05rem;
+  }
+
+  /* ---------- TABLE ---------- */
+  .table-wrap{
+    overflow-x:auto;
+    border-radius:10px;
+    border:1px solid var(--border);
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:.88rem;
+    background:#fff;
+    min-width:660px;
+  }
+  thead th{
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    color:#fff;
+    text-align:left;
+    padding:10px 12px;
+    font-weight:700;
+    white-space:nowrap;
+  }
+  tbody td{
+    padding:9px 12px;
+    border-bottom:1px solid var(--border);
+    vertical-align:top;
+  }
+  tbody tr:nth-child(even){ background:#f8fafc; }
+  tbody tr:last-child td{ border-bottom:none; }
+  tbody td:first-child{ font-weight:600; color:var(--primary-dark); }
+
+  /* ---------- WRITING ---------- */
+  .writing-task{
+    background:linear-gradient(135deg,#eff6ff,#f5f3ff);
+    border:1px solid #c7d2fe;
+    border-radius:12px;
+    padding:18px 20px;
+    margin-bottom:20px;
+  }
+  .writing-task p{ margin:0 0 10px; }
+  .writing-task p:last-child{ margin-bottom:0; }
+  .badge{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.06em;
+    padding:3px 10px;
+    border-radius:999px;
+    margin-bottom:10px;
+    text-transform:uppercase;
+  }
+  .badge.task1{ background:linear-gradient(135deg,#0ea5e9,#2563eb); }
+  .badge.task2{ background:linear-gradient(135deg,#7c3aed,#a855f7); }
+
+  h4.sub{
+    margin:22px 0 10px;
+    font-size:1rem;
+    color:var(--primary-dark);
+    border-bottom:2px solid #e0e7ff;
+    padding-bottom:6px;
+  }
+
+  ul.clean, ol.clean{
+    margin:0 0 6px;
+    padding-left:22px;
+  }
+  ul.clean li, ol.clean li{ margin-bottom:6px; font-size:.94rem; }
+
+  .tip{
+    background:#ecfdf5;
+    border-left:4px solid var(--green);
+    border-radius:10px;
+    padding:12px 16px;
+    font-size:.92rem;
+    color:#065f46;
+    margin-bottom:10px;
+  }
+  .tip.warn{
+    background:#fef2f2;
+    border-left-color:var(--red);
+    color:#7f1d1d;
+  }
+  .tip.info{
+    background:#eff6ff;
+    border-left-color:var(--primary);
+    color:#1e3a8a;
+  }
+
+  /* ---------- WRITING EDITOR ---------- */
+  .writing-editor{
+    margin-top:8px;
+  }
+  .writing-editor label{
+    display:block;
+    font-weight:700;
+    color:var(--primary-dark);
+    margin-bottom:8px;
+    font-size:.95rem;
+  }
+  .writing-editor textarea{
+    width:100%;
+    min-height:220px;
+    padding:16px 18px;
+    border-radius:12px;
+    border:1.5px solid #c7d2fe;
+    background:#fbfdff;
+    font-family:"Segoe UI", system-ui, Arial, sans-serif;
+    font-size:.97rem;
+    line-height:1.7;
+    color:var(--text);
+    resize:vertical;
+    transition:border-color .2s, box-shadow .2s;
+  }
+  .writing-editor textarea.essay{
+    min-height:340px;
+  }
+  .writing-editor textarea:focus{
+    outline:none;
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+  }
+  .writing-meta{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:8px;
+    font-size:.85rem;
+    color:var(--muted);
+    flex-wrap:wrap;
+    gap:6px;
+  }
+  .writing-meta .word-count strong{ color:var(--primary-dark); }
+  .writing-meta .word-count.ok strong{ color:var(--green); }
+  .writing-meta .word-count.low strong{ color:var(--red); }
+  .writing-meta .hint{ font-style:italic; opacity:.85; }
+
+  /* ---------- TASK DIVIDER ---------- */
+  .task-block{
+    border:1px solid #e0e7ff;
+    border-radius:16px;
+    padding:22px 20px;
+    margin-bottom:24px;
+    background:#fdfdff;
+  }
+  .task-block.task1-block{
+    border-top:4px solid #0ea5e9;
+  }
+  .task-block.task2-block{
+    border-top:4px solid #a855f7;
+  }
+  .task-heading{
+    margin:0 0 14px;
+    font-size:1.1rem;
+    color:var(--primary-dark);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  /* ---------- ACTION BAR ---------- */
+  .action-bar{
+    position:sticky;
+    bottom:0;
+    margin-top:8px;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(10px);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:16px 20px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:12px;
+    box-shadow:0 -6px 24px -14px rgba(15,23,42,.35);
+    z-index:50;
+  }
+
+  .btn{
+    border:none;
+    border-radius:10px;
+    padding:12px 26px;
+    font-size:.96rem;
+    font-weight:700;
+    font-family:inherit;
+    cursor:pointer;
+    transition:transform .15s, box-shadow .2s, opacity .2s;
+  }
+  .btn:active{ transform:translateY(1px); }
+
+  .btn-primary{
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    color:#fff;
+    box-shadow:0 8px 20px -8px rgba(37,99,235,.7);
+  }
+  .btn-primary:hover:not(:disabled){ box-shadow:0 12px 26px -8px rgba(37,99,235,.85); }
+  .btn-primary:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+    box-shadow:none;
+    background:linear-gradient(135deg,#94a3b8,#a1a1aa);
+  }
+
+  .btn-ghost{
+    background:#fff;
+    color:var(--primary-dark);
+    border:1.5px solid #c7d2fe;
+  }
+  .btn-ghost:hover{ background:#f5f7ff; }
+
+  .progress{
+    margin-left:auto;
+    font-size:.88rem;
+    color:var(--muted);
+    font-weight:600;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:2px;
+  }
+  .progress .progress-main span{ color:var(--primary-dark); }
+  .lock-status{
+    font-size:.78rem;
+    font-weight:700;
+  }
+  .lock-status.locked{ color:var(--red); }
+  .lock-status.ready{ color:var(--green); }
+
+  /* ---------- RESULT ---------- */
+  .result{
+    display:none;
+    margin-top:22px;
+    border-radius:16px;
+    padding:26px 28px;
+    background:linear-gradient(135deg,#1e293b,#334155);
+    color:#fff;
+    box-shadow:0 14px 34px -16px rgba(15,23,42,.7);
+  }
+  .result.show{ display:block; animation:fadeIn .4s ease; }
+  .result h3{
+    margin:0 0 10px;
+    font-size:1.15rem;
+  }
+  .score-line{
+    font-size:2.4rem;
+    font-weight:800;
+    letter-spacing:-.02em;
+    margin:0 0 6px;
+  }
+  .score-line small{
+    font-size:1rem;
+    font-weight:600;
+    opacity:.7;
+  }
+  .result p{ margin:0 0 6px; font-size:.95rem; opacity:.92; }
+  .result .verdict{
+    display:inline-block;
+    margin-top:10px;
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.25);
+    padding:6px 16px;
+    border-radius:999px;
+    font-size:.88rem;
+    font-weight:700;
+  }
+  .result .breakdown{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:14px;
+  }
+  .result .breakdown .chip{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.2);
+    padding:6px 14px;
+    border-radius:10px;
+    font-size:.85rem;
+    font-weight:600;
+  }
+  .result .unlock-note{
+    margin-top:14px;
+    padding:10px 14px;
+    background:rgba(34,197,94,.18);
+    border:1px solid rgba(34,197,94,.4);
+    border-radius:10px;
+    font-size:.88rem;
+    font-weight:600;
+    color:#bbf7d0;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:640px){
+    .page{ padding:14px 10px 70px; }
+    .hero{ padding:26px 20px; border-radius:16px; }
+    .hero h1{ font-size:1.5rem; }
+    .card{ padding:20px 16px; border-radius:14px; }
+    .passage{ padding:16px; }
+    .action-bar{ padding:12px; gap:8px; }
+    .btn{ padding:11px 18px; font-size:.9rem; flex:1; }
+    .progress{ width:100%; margin-left:0; align-items:center; }
+    .score-line{ font-size:1.9rem; }
+    .writing-editor textarea{ min-height:180px; }
+    .writing-editor textarea.essay{ min-height:260px; }
+    .task-block{ padding:16px 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <p class="hero-tag">VSTEP B2 • Đề thi thử đầy đủ</p>
+    <h1>VSTEP B2 Mock Test — Full Package</h1>
+    <p class="hero-sub">Reading (2 bài × 5 câu) &nbsp;•&nbsp; Use of English (30 câu) &nbsp;•&nbsp; Writing Task 1 &amp; Task 2</p>
+    <p class="hero-note">Tổng 40 câu trắc nghiệm + 2 bài viết.</p>
+    <div class="hero-rules">
+      <strong>⚠️ Quy tắc làm bài:</strong><br>
+      1. Phải trả lời <strong>đủ 40/40 câu trắc nghiệm</strong> thì nút <em>“Nộp bài”</em> mới được kích hoạt.<br>
+      2. Tất cả <strong>gợi ý, dàn ý, từ vựng và giải thích</strong> đều bị <strong>khoá</strong> cho đến khi bạn nộp bài xong.
+    </div>
+  </header>
+
+  <!-- ============================================================= -->
+  <!-- ==================== PART 1: READING ======================== -->
+  <!-- ============================================================= -->
+  <section class="card">
+    <h2 class="section-title">PART 1 — READING</h2>
+    <p class="section-desc">Đọc 2 đoạn văn và trả lời 10 câu hỏi trắc nghiệm (5 câu mỗi bài).</p>
+
+    <!-- ---------- PASSAGE 1 ---------- -->
+    <span class="passage-tag">Reading Passage 1</span>
+    <article class="passage">
+      <h3>The Rise of Remote Work</h3>
+      <p>
+        For much of the twentieth century, the idea of a “workplace” was inseparable from a physical
+        location. Employees commuted to offices, clocked in at fixed hours, and were supervised in person.
+        The arrival of reliable broadband internet, however, gradually undermined this assumption. What
+        began as an occasional privilege for a small number of technology firms has now become a mainstream
+        arrangement across many industries.
+      </p>
+      <p>
+        The advantages are frequently cited. Workers save both time and money by avoiding lengthy commutes,
+        and they often report greater autonomy over how they organise their day. Employers, meanwhile, can
+        reduce expenditure on office space and recruit talent from a far wider geographical area. For
+        parents and people with disabilities, remote work has proved particularly valuable, offering
+        flexibility that conventional office schedules rarely permitted.
+      </p>
+      <p>
+        Nevertheless, the shift has not been without drawbacks. Critics argue that spontaneous
+        communication — the casual conversations that often generate creative ideas — is difficult to
+        reproduce online. New employees may struggle to absorb an organisation's culture when they have
+        never met their colleagues face to face. There is also growing evidence that constant digital
+        connectivity blurs the boundary between professional and personal life, leaving some workers unable
+        to disconnect. Surveys suggest that a substantial minority feel more isolated than they did before,
+        despite being in frequent virtual contact with others.
+      </p>
+      <p>
+        Most analysts therefore reject the extremes. Neither a complete return to the office nor a wholesale
+        shift to remote work seems realistic. Instead, hybrid models, in which employees divide their week
+        between home and workplace, are emerging as the compromise of choice. Such arrangements require
+        managers to judge performance by results rather than by visible attendance — a change that many
+        organisations have found surprisingly difficult to accept.
+      </p>
+      <p>
+        Ultimately, the debate reveals something deeper: the assumption that productivity depends on
+        proximity is being questioned for the first time in decades. Whether firms embrace this change or
+        resist it will shape not only where people work, but how they are valued.
+      </p>
+    </article>
+
+    <!-- Reading 1 – Q1 -->
+    <div class="question" data-qid="r1" data-answer="B">
+      <p class="q-text"><span class="q-num">1</span>According to paragraph 1, before broadband internet became widespread, ______.</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="r1" value="A"><span class="opt-key">A.</span><span class="opt-text">most employees were allowed to work from home</span></label>
+        <label class="option"><input type="radio" name="r1" value="B"><span class="opt-key">B.</span><span class="opt-text">the workplace was closely linked to a physical location</span></label>
+        <label class="option"><input type="radio" name="r1" value="C"><span class="opt-key">C.</span><span class="opt-text">technology companies refused to hire remote staff</span></label>
+        <label class="option"><input type="radio" name="r1" value="D"><span class="opt-key">D.</span><span class="opt-text">workers had greater control over their working hours</span></label>
+      </div>
+      <div class="explanation" hidden>
+        <span class="exp-answer">Đáp án đúng: B</span>
+        <p><strong>Vì sao B đúng:</strong> Câu đầu đoạn 1 viết “the idea of a ‘workplace’ was inseparable from a physical location” — “inseparable from” = gắn chặt/không thể tách rời khỏi một địa điểm vật lý. Đây chính là nội dung của B.</p>
+        <p><strong>Vì sao A sai:</strong> Đoạn văn nói làm việc từ xa chỉ là “an occasional privilege for a small number of technology firms” (đặc quyền thỉnh thoảng của một số ít công ty công nghệ), tức là rất hiếm, chứ không phải “most employees”.</p>
+        <p><strong>Vì sao C sai:</strong> Bài không hề nói các công ty công nghệ “từ chối” tuyển nhân viên từ xa; ngược lại họ là những đơn vị đầu tiên cho phép điều đó.</p>
+        <p><strong>Vì sao D sai:</strong> Quyền tự chủ (autonomy) được nêu ở đoạn 2 như một lợi ích <em>của việc làm từ xa</em>, không phải tình trạng trước kia. Hơn nữa đoạn 1 nói nhân viên phải “clock in at fixed hours” — giờ giấc cố định, tức là ít tự chủ.</p>
+      </div>
+    </div>
+
+    <!-- Reading 1 – Q2 -->
+    <div class="question" data-qid="r2" data-answer="B">
+      <p class="q-text"><span class="q-num">2</span>In paragraph 2, which advantage for <em>employers</em> is mentioned?</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="r2" value="A"><span class="opt-key">A.</span><span class="opt-text">Employees tend to work longer hours.</span></label>
+        <label class="option"><input type="radio" name="r2" value="B"><span class="opt-key">B.</span><span class="opt-text">The company can spend less on office space.</span></label>
+        <label class="option"><input type="radio" name="r2" value="C"><span class="opt-key">C.</span><span class="opt-text">Creative ideas are generated more quickly.</span></label>
+        <label class="option"><input type="radio" name="r2" value="D"><span class="opt-key">D.</span><span class="opt-text">New staff require less training.</span></label>
+      </div>
+      <div class="explanation" hidden>
+        <span class="exp-answer">Đáp án đúng: B</span>
+        <p><strong>Vì sao B đúng:</strong> Đoạn 2 viết “Employers, meanwhile, can reduce <em>expenditure on office space</em> and recruit talent from a far wider geographical area.” — “reduce expenditure on office space” = giảm chi phí thuê/mua mặt bằng văn phòng. Đây là lợi ích dành cho người sử dụng lao động.</p>
+        <p><strong>Vì sao A sai:</strong> Bài không đưa ra thông tin nào về việc nhân viên làm nhiều giờ hơn; đây là phương án “bịa” thông tin (not mentioned).</p>
+        <p><strong>Vì sao C sai:</strong> Ý tưởng sáng tạo được nhắc ở đoạn 3, nhưng theo hướng <em>tiêu cực</em>: giao tiếp ngẫu hứng tạo ra ý tưởng sáng tạo thì khó tái tạo khi làm online. Vậy C vừa sai nội dung vừa sai đoạn.</p>
+        <p><strong>Vì sao D sai:</strong> Đoạn 3 nói nhân viên mới gặp khó khăn khi tiếp thu văn hóa công ty — tức là bất lợi, không phải lợi ích, và bài cũng không nói gì về việc giảm đào tạo.</p>
+      </div>
+    </div>
+
+    <!-- Reading 1 – Q3 -->
+    <div class="question" data-qid="r3" data-answer="A">
+      <p class="q-text"><span class="q-num">3</span>The word <strong>“blurs”</strong> in paragraph 3 is closest in meaning to ______.</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="r3" value="A"><span class="opt-key">A.</span><span class="opt-text">makes less clear</span></label>
+        <label class="option"><input type="radio" name="r3" value="B"><span class="opt-key">B.</span><span class="opt-text">breaks down completely</span></label>
+        <label class="option"><input type="radio" name="r3" value="C"><span class="opt-key">C.</span><span class="opt-text">strengthens</span></label>
+        <label class="option"><input type="radio" name="r3" value="D"><span class="opt-key">D.</span><span class="opt-text">draws attention to</span></label>
+      </div>
+      <div class="explanation" hidden>
+        <span class="exp-answer">Đáp án đúng: A</span>
+        <p><strong>Vì sao A đúng:</strong> “blur” = làm mờ, làm không rõ ràng. Ngữ cảnh: “constant digital connectivity <em>blurs</em> the boundary between professional and personal life” — kết nối số liên tục làm <em>mờ nhòe</em> ranh giới giữa công việc và đời sống riêng tư. Vậy “makes less clear” (làm kém rõ ràng) là gần nghĩa nhất.</p>
+        <p><strong>Vì sao B sai:</strong> “breaks down completely” = phá vỡ hoàn toàn. Bài chỉ nói ranh giới bị mờ đi chứ không nói bị xóa bỏ hoàn toàn — mức độ quá mạnh so với nguyên văn.</p>
+        <p><strong>Vì sao C sai:</strong> “strengthens” = làm mạnh thêm, trái ngược hoàn toàn với nghĩa của “blur”.</p>
+        <p><strong>Vì sao D sai:</strong> “draws attention to” = thu hút sự chú ý tới — không liên quan đến nghĩa “làm mờ”.</p>
+      </div>
+    </div>
+
+    <!-- Reading 1 – Q4 -->
+    <div class="question" data-qid="r4" data-answer="B">
+      <p class="q-text"><span class="q-num">4</span>What does the writer suggest about <em>new employees</em> in paragraph 3?</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="r4" value="A"><span class="opt-key">A.</span><span class="opt-text">They adapt to company culture faster when working online.</span></label>
+        <label class="option"><input type="radio" name="r4" value="B"><span class="opt-key">B.</span><span class="opt-text">They may find it hard to absorb company culture remotely.</span></label>
+        <label class="option"><input type="radio" name="r4" value="C"><span class="opt-key">C.</span><span class="opt-text">They prefer virtual contact to face-to-face meetings.</span></label>
+        <label class="option"><input type="radio" name="r4" value="D"><span class="opt-key">D.</span><span class="opt-text">They are the group most affected by digital connectivity.</span></label>
+      </div>
+      <div class="explanation" hidden>
+        <span class="exp-answer">Đáp án đúng: B</span>
+        <p><strong>Vì sao B đúng:</strong> Nguyên văn: “New employees may <em>struggle to absorb an organisation's culture</em> when they have never met their colleagues face to face.” — “struggle to do something” = gặp khó khăn khi làm gì; “absorb culture” = tiếp thu/hấp thụ văn hóa công ty. B diễn đạt lại chính xác ý này.</p>
+        <p><strong>Vì sao A sai:</strong> Trái ngược với nguyên văn — bài nói họ <em>gặp khó khăn</em> chứ không phải thích nghi nhanh hơn.</p>
+        <p><strong>Vì sao C sai:</strong> Bài không đưa ra bất kỳ so sánh nào về sở thích của nhân viên mới đối với họp trực tuyến hay trực tiếp — thông tin không có trong bài.</p>
+        <p><strong>Vì sao D sai:</strong> Đoạn 3 nói “a substantial minority feel more isolated” — một nhóm thiểu số đáng kể cảm thấy bị cô lập, nhưng không khẳng định nhân viên mới là <em>nhóm bị ảnh hưởng nặng nhất</em>. Đây là suy diễn quá xa (over-generalisation).</p>
+      </div>
+    </div>
+
+    <!-- Reading 1 – Q5 -->
+    <div class="question" data-qid="r5" data-answer="C">
+      <p class="q-text"><span class="q-num">5</span>What is the writer's main point in the last two paragraphs?</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="r5" value="A"><span class="opt-key">A.</span><span class="opt-text">Companies should abandon remote work entirely.</span></label>
+        <label class="option"><input type="radio" name="r5" value="B"><span class="opt-key">B.</span><span class="opt-text">Hybrid models are the most popular choice among employees.</span></label>
+        <label class="option"><input type="radio" name="r5" value="C"><span class="opt-key">C.</span><span class="opt-text">The belief that productivity requires physical proximity is being questioned.</span></label>
+        <label class="option"><input type="radio" name="r5" value="D"><span class="opt-key">D.</span><span class="opt-text">Managers find it easy to assess staff by results.</span></label>
+      </div>
+      <div class="explanation" hidden>
+        <span class="exp-answer">Đáp án đúng: C</span>
+        <p><strong>Vì sao C đúng:</strong> Đoạn cuối khẳng định: “the assumption that <em>productivity depends on proximity</em> is being questioned for the first time in decades.” — “proximity” = sự gần gũi về mặt không gian/vị trí. C là bản paraphrase sát nghĩa nhất của câu chốt này.</p>
+        <p><strong>Vì sao A sai:</strong> Đoạn 4 viết “Most analysts therefore <em>reject the extremes</em>. Neither a complete return to the office nor a wholesale shift to remote work seems realistic.” — Tác giả bác bỏ cả hai thái cực, nên A trái ngược hoàn toàn với quan điểm của bài.</p>
+        <p><strong>Vì sao B sai:</strong> Bài nói hybrid là “the compromise of choice” (giải pháp thỏa hiệp được lựa chọn), nhưng không hề nói đây là lựa chọn <em>phổ biến nhất trong số nhân viên</em> dựa trên khảo sát nào. Đây là chi tiết bịa thêm.</p>
+        <p><strong>Vì sao D sai:</strong> Nguyên văn nói ngược lại: đánh giá nhân viên qua kết quả là “a change that many organisations have found <em>surprisingly difficult to accept</em>” — các tổ chức thấy khó chấp nhận, chứ không phải dễ dàng.</p>
+      </div>
+    </div>
+
+    <!-- ---------- PASSAGE 2 ---------- -->
+    <span class="passage-tag" style="margin-top:30px;">Reading Passage 2</span>
+    <article class="passage">
+      <h3>The Science of Sleep</h3>
+      <p>
+        For centuries, sleep was regarded as a passive state during which the body simply shut down.
+        Modern neuroscience, however, has revealed that sleep is an intensely active process essential to
+        physical and mental health. During the night, the brain consolidates memories, clears metabolic
+        waste, and regulates hormones that control everything from appetite to stress.
+      </p>
+      <p>
+        Research conducted over the past two decades has identified distinct stages of sleep, each with a
+        specific function. Deep sleep, for instance, is crucial for physical restoration, while REM (rapid
+        eye movement) sleep appears to play a key role in emotional processing and creativity. Individuals
+        who are deprived of either type experience measurable declines in concentration, mood and immune
+        function.
+      </p>
+      <p>
+        Despite this, sleep is often treated as expendable. A culture that prizes productivity and constant
+        connectivity encourages people to sacrifice rest, and the blue light emitted by smartphones and
+        computers can delay the release of melatonin, the hormone that signals the onset of sleep. The
+        result is a global epidemic of what experts call “sleep debt” — a cumulative deficit that cannot be
+        repaid with a single long lie-in.
+      </p>
+      <p>
+        Some employers have begun to take the issue seriously. Companies in Japan and the United States
+        have introduced nap rooms and flexible schedules, arguing that well-rested staff make fewer errors
+        and take fewer sick days. Critics, however, warn that such measures may simply shift responsibility
+        onto individuals rather than addressing the deeper causes of overwork.
+      </p>
+      <p>
+        For most people, the solution lies in small, consistent habits. Going to bed and waking at the same
+        time, limiting screens before bedtime, and exposing oneself to natural light in the morning can
+        dramatically improve sleep quality. As one researcher put it, “Sleep is not a luxury; it is the
+        foundation on which every other aspect of health is built.”
+      </p>
+    </article>
+
+    <!-- Reading 2 – Q6 -->
+    <div class="question" data-qid="r6" data-answer="B">
+      <p class="q-text"><span class="q-num">6</span>According to paragraph 1, what was the traditional view of sleep?</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="r6" value="A"><span class="opt-key">A.</span><span class="opt-text">It was seen as an active process.</span></label>
+        <label class="option"><input type="radio" name="r6" value="B"><span class="opt-key">B.</span><span class="opt-text">It was considered a passive state.</span></label>
+        <label class="option"><input type="radio" name="r6" value="C"><span class="opt-key">C.</span><span class="opt-text">It was thought to be unimportant for health.</span></label>
+        <label class="option"><input type="radio" name="r6" value="D"><span class="opt-key">D.</span><span class="opt-text">It was linked to memory loss.</span></label>
+      </div>
+      <div class="explanation" hidden>
+        <span class="exp-answer">Đáp án đúng: B</span>
+        <p><strong>Vì sao B đúng:</strong> Câu đầu đoạn 1: “For centuries, sleep was regarded as a <em>passive state</em> during which the body simply shut down.” — “passive state” = trạng thái thụ động. B mô tả chính xác quan điểm truyền thống này.</p>
+        <p><strong>Vì sao A sai:</strong> “active process” là quan điểm <em>hiện đại</em> của neuroscience, tương phản với quan điểm truyền thống. Đề hỏi về quan điểm cũ nên A sai.</p>
+        <p><strong>Vì sao C sai:</strong> Bài không nói người xưa coi giấc ngủ là “không quan trọng cho sức khỏe”; họ chỉ coi nó là trạng thái thụ động. Đây là suy diễn thêm.</p>
+        <p><strong>Vì sao D sai:</strong> “memory loss” không được nhắc đến trong đoạn 1; bài nói giấc ngủ giúp củng cố ký ức (consolidates memories) chứ không gây mất trí nhớ.</p>
+      </div>
+    </div>
+
+    <!-- Reading 2 – Q7 -->
+    <div class="question" data-qid="r7" data-answer="B">
+      <p class="q-text"><span class="q-num">7</span>In paragraph 2, which function is associated with <strong>REM sleep</strong>?</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="r7" value="A"><span class="opt-key">A.</span><span class="opt-text">Physical restoration</span></label>
+        <label class="option"><input type="radio" name="r7" value="B"><span class="opt-key">B.</span><span class="opt-text">Emotional processing</span></label>
+        <label class="option"><input type="radio" name="r7" value="C"><span class="opt-key">C.</span><span class="opt-text">Hormone regulation</span></label>
+        <label class="option"><input type="radio" name="r7" value="D"><span class="opt-key">D.</span><span class="opt-text">Waste removal</span></label>
+      </div>
+      <div class="explanation" hidden>
+        <span class="exp-answer">Đáp án đúng: B</span>
+        <p><strong>Vì sao B đúng:</strong> Nguyên văn đoạn 2: “REM (rapid eye movement) sleep appears to play a key role in <em>emotional processing and creativity</em>.” — REM sleep gắn với xử lý cảm xúc và sáng tạo. B khớp chính xác.</p>
+        <p><strong>Vì sao A sai:</strong> “Physical restoration” (phục hồi thể chất) gắn với <em>deep sleep</em>, không phải REM sleep. Đây là bẫy hoán đổi thông tin.</p>
+        <p><strong>Vì sao C sai:</strong> “Hormone regulation” được nhắc ở đoạn 1 như chức năng chung của giấc ngủ, không gắn riêng với REM sleep.</p>
+        <p><strong>Vì sao D sai:</strong> “Waste removal” cũng thuộc đoạn 1 (clears metabolic waste) — chức năng chung, không phải đặc trưng của REM sleep.</p>
+      </div>
+    </div>
+
+    <!-- Reading 2 – Q8 -->
+    <div class="question" data-qid="r8" data-answer="C">
+      <p class="q-text"><span class="q-num">8</span>The word <strong>“expendable”</strong> in paragraph 3 is closest in meaning to ______.</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="r8" value="A"><span class="opt-key">A.</span><span class="opt-text">essential</span></label>
+        <label class="option"><input type="radio" name="r8" value="B"><span class="opt-key">B.</span><span class="opt-text">expensive</span></label>
+        <label class="option"><input type="radio" name="r8" value="C"><span class="opt-key">C.</span><span class="opt-text">dispensable</span></label>
+        <label class="option"><input type="radio" name="r8" value="D"><span class="opt-key">D.</span><span class="opt-text">healthy</span></label>
+      </div>
+      <div class="explanation" hidden>
+        <span class="exp-answer">Đáp án đúng: C</span>
+        <p><strong>Vì sao C đúng:</strong> “expendable” = có thể bỏ đi, không cần thiết, có thể hy sinh. Ngữ cảnh: “sleep is often treated as <em>expendable</em>” — giấc ngủ thường bị coi là thứ có thể cắt bỏ. “Dispensable” (có thể bỏ qua, không thiết yếu) là từ đồng nghĩa chính xác nhất.</p>
+        <p><strong>Vì sao A sai:</strong> “essential” = thiết yếu, quan trọng — trái ngược hoàn toàn với “expendable”.</p>
+        <p><strong>Vì sao B sai:</strong> “expensive” = đắt đỏ — chỉ nói về giá cả, không liên quan đến nghĩa “có thể bỏ đi”.</p>
+        <p><strong>Vì sao D sai:</strong> “healthy” = khỏe mạnh — không liên quan về nghĩa.</p>
+      </div>
+    </div>
+
+    <!-- Reading 2 – Q9 -->
+    <div class="question" data-qid="r9" data-answer="B">
+      <p class="q-text"><span class="q-num">9</span>According to paragraph 4, what do critics argue about company nap rooms?</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="r9" value="A"><span class="opt-key">A.</span><span class="opt-text">They are too expensive to maintain.</span></label>
+        <label class="option"><input type="radio" name="r9" value="B"><span class="opt-key">B.</span><span class="opt-text">They may not address the root causes of overwork.</span></label>
+        <label class="option"><input type="radio" name="r9" value="C"><span class="opt-key">C.</span><span class="opt-text">They significantly improve productivity.</span></label>
+        <label class="option"><input type="radio" name="r9" value="D"><span class="opt-key">D.</span><span class="opt-text">They are only popular in Japan.</span></label>
+      </div>
+      <div class="explanation" hidden>
+        <span class="exp-answer">Đáp án đúng: B</span>
+        <p><strong>Vì sao B đúng:</strong> Nguyên văn đoạn 4: “Critics, however, warn that such measures may simply <em>shift responsibility onto individuals rather than addressing the deeper causes of overwork</em>.” — “the deeper causes of overwork” = nguyên nhân gốc rễ của việc làm quá sức. B diễn đạt lại chính xác.</p>
+        <p><strong>Vì sao A sai:</strong> Bài không đề cập đến chi phí duy trì phòng nghỉ; đây là thông tin bịa thêm.</p>
+        <p><strong>Vì sao C sai:</strong> Đây là lập luận của <em>người ủng hộ</em> (“arguing that well-rested staff make fewer errors”), không phải của critics. Đề hỏi ý kiến của critics nên C sai.</p>
+        <p><strong>Vì sao D sai:</strong> Bài chỉ nói các công ty ở Nhật và Mỹ <em>đã giới thiệu</em> phòng nghỉ, chứ không nói nó chỉ phổ biến ở Nhật.</p>
+      </div>
+    </div>
+
+    <!-- Reading 2 – Q10 -->
+    <div class="question" data-qid="r10" data-answer="B">
+      <p class="q-text"><span class="q-num">10</span>What is the main idea of the passage?</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="r10" value="A"><span class="opt-key">A.</span><span class="opt-text">Sleep is a waste of time that should be minimised.</span></label>
+        <label class="option"><input type="radio" name="r10" value="B"><span class="opt-key">B.</span><span class="opt-text">Modern research shows sleep is essential and can be improved through habits.</span></label>
+        <label class="option"><input type="radio" name="r10" value="C"><span class="opt-key">C.</span><span class="opt-text">Only Japanese and American companies care about sleep.</span></label>
+        <label class="option"><input type="radio" name="r10" value="D"><span class="opt-key">D.</span><span class="opt-text">Blue light is the sole cause of sleep problems.</span></label>
+      </div>
+      <div class="explanation" hidden>
+        <span class="exp-answer">Đáp án đúng: B</span>
+        <p><strong>Vì sao B đúng:</strong> Cả bài triển khai theo mạch: (1) sleep là quá trình chủ động thiết yếu → (2) các giai đoạn ngủ có chức năng riêng → (3) nguy cơ “sleep debt” → (4) giải pháp nằm ở thói quen nhỏ, nhất quán. Đoạn cuối chốt lại: “Sleep… is the foundation on which every other aspect of health is built.” B tóm tắt chính xác tinh thần chung.</p>
+        <p><strong>Vì sao A sai:</strong> Trái ngược hoàn toàn với quan điểm của bài; bài khẳng định giấc ngủ là nền tảng sức khỏe, không phải lãng phí thời gian.</p>
+        <p><strong>Vì sao C sai:</strong> Nhật và Mỹ chỉ được nhắc như <em>ví dụ</em> về một số công ty đã hành động; bài không nói chỉ hai nước này quan tâm đến giấc ngủ. Đây là chi tiết bị phóng đại.</p>
+        <p><strong>Vì sao D sai:</strong> Blue light chỉ là <em>một trong nhiều</em> nguyên nhân gây rối loạn giấc ngủ, không phải nguyên nhân duy nhất (“sole cause”). Đây là lỗi tuyệt đối hóa.</p>
+      </div>
+    </div>
+
+    <!-- Vocabulary table for Passage 2 -->
+    <details class="extra is-locked">
+      <summary>📚 Từ vựng cốt lõi – Reading Passage 2 (“The Science of Sleep”)</summary>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Từ vựng</th>
+              <th>Loại từ</th>
+              <th>Nghĩa tiếng Việt</th>
+              <th>Word Family</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>passive</td><td>adj</td><td>thụ động, bị động</td><td>passive (adj) → passivity (n) → passively (adv)</td></tr>
+            <tr><td>neuroscience</td><td>n</td><td>khoa học thần kinh</td><td>neuroscience (n) → neuroscientist (n) → neuroscientific (adj)</td></tr>
+            <tr><td>consolidate</td><td>v</td><td>củng cố, làm vững chắc</td><td>consolidate (v) → consolidation (n) → consolidated (adj)</td></tr>
+            <tr><td>metabolic</td><td>adj</td><td>thuộc trao đổi chất</td><td>metabolism (n) → metabolic (adj) → metabolise (v)</td></tr>
+            <tr><td>regulate</td><td>v</td><td>điều chỉnh, điều hòa</td><td>regulate (v) → regulation (n) → regulator (n) → regulatory (adj)</td></tr>
+            <tr><td>distinct</td><td>adj</td><td>riêng biệt, rõ rệt</td><td>distinct (adj) → distinction (n) → distinctive (adj) → distinctly (adv)</td></tr>
+            <tr><td>restoration</td><td>n</td><td>sự phục hồi, khôi phục</td><td>restore (v) → restoration (n) → restorative (adj)</td></tr>
+            <tr><td>deprive</td><td>v</td><td>tước đoạt, làm mất đi</td><td>deprive (v) → deprivation (n) → deprived (adj)</td></tr>
+            <tr><td>measurable</td><td>adj</td><td>có thể đo lường được</td><td>measure (v/n) → measurement (n) → measurable (adj) → measurably (adv)</td></tr>
+            <tr><td>immune</td><td>adj</td><td>thuộc miễn dịch; miễn nhiễm</td><td>immune (adj) → immunity (n) → immunise (v) → immunisation (n)</td></tr>
+            <tr><td>expendable</td><td>adj</td><td>có thể bỏ đi, không thiết yếu</td><td>expend (v) → expendable (adj) → expenditure (n)</td></tr>
+            <tr><td>emit</td><td>v</td><td>phát ra, thải ra</td><td>emit (v) → emission (n) → emitter (n)</td></tr>
+            <tr><td>delay</td><td>v / n</td><td>trì hoãn, làm chậm; sự chậm trễ</td><td>delay (v/n) → delayed (adj) → delaying (adj)</td></tr>
+            <tr><td>onset</td><td>n</td><td>sự bắt đầu, khởi phát</td><td>onset (n) → oncoming (adj)</td></tr>
+            <tr><td>cumulative</td><td>adj</td><td>tích lũy, chồng chất</td><td>accumulate (v) → accumulation (n) → cumulative (adj) → cumulatively (adv)</td></tr>
+            <tr><td>deficit</td><td>n</td><td>sự thiếu hụt, thâm hụt</td><td>deficient (adj) → deficiency (n) → deficit (n)</td></tr>
+            <tr><td>flexible</td><td>adj</td><td>linh hoạt, mềm dẻo</td><td>flex (v) → flexibility (n) → flexible (adj) → flexibly (adv)</td></tr>
+            <tr><td>overwork</td><td>n / v</td><td>sự làm việc quá sức; làm quá nhiều</td><td>work (v/n) → overwork (n/v) → overworked (adj)</td></tr>
+            <tr><td>consistent</td><td>adj</td><td>nhất quán, đều đặn</td><td>consist (v) → consistency (n) → consistent (adj) → consistently (adv)</td></tr>
+            <tr><td>foundation</td><td>n</td><td>nền tảng, cơ sở</td><td>found (v) → foundation (n) → foundational (adj) → founder (n)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- Vocabulary table for Passage 1 -->
+    <details class="extra is-locked">
+      <summary>📚 Từ vựng cốt lõi – Reading Passage 1 (“The Rise of Remote Work”)</summary>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Từ vựng</th>
+              <th>Loại từ</th>
+              <th>Nghĩa tiếng Việt</th>
+              <th>Word Family</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>commute</td><td>v / n</td><td>đi lại (giữa nhà và nơi làm việc)</td><td>commute (v) → commuter (n) → commuting (n)</td></tr>
+            <tr><td>supervise</td><td>v</td><td>giám sát, quản lý</td><td>supervise (v) → supervision (n) → supervisor (n) → supervisory (adj)</td></tr>
+            <tr><td>reliable</td><td>adj</td><td>đáng tin cậy, ổn định</td><td>rely (v) → reliance (n) → reliable (adj) → reliably (adv)</td></tr>
+            <tr><td>undermine</td><td>v</td><td>làm suy yếu, phá hoại ngầm</td><td>undermine (v) → undermining (n/adj) → undermined (adj)</td></tr>
+            <tr><td>assumption</td><td>n</td><td>giả định, điều mặc nhiên coi là đúng</td><td>assume (v) → assumption (n) → assumed (adj) → presumably (adv)</td></tr>
+            <tr><td>privilege</td><td>n</td><td>đặc quyền, đặc ân</td><td>privilege (n/v) → privileged (adj) → unprivileged (adj)</td></tr>
+            <tr><td>mainstream</td><td>adj / n</td><td>phổ biến, chính thống; xu hướng chủ đạo</td><td>mainstream (n/adj/v) → mainstreaming (n)</td></tr>
+            <tr><td>autonomy</td><td>n</td><td>quyền tự chủ, sự tự quyết</td><td>autonomy (n) → autonomous (adj) → autonomously (adv)</td></tr>
+            <tr><td>expenditure</td><td>n</td><td>chi phí, khoản chi tiêu</td><td>expend (v) → expenditure (n) → expensive (adj) → expense (n)</td></tr>
+            <tr><td>recruit</td><td>v</td><td>tuyển dụng, chiêu mộ</td><td>recruit (v) → recruitment (n) → recruiter (n) → recruiting (n)</td></tr>
+            <tr><td>geographical</td><td>adj</td><td>thuộc về địa lý</td><td>geography (n) → geographical (adj) → geographically (adv)</td></tr>
+            <tr><td>flexibility</td><td>n</td><td>sự linh hoạt, tính mềm dẻo</td><td>flexible (adj) → flexibility (n) → flexibly (adv) → flexitime (n)</td></tr>
+            <tr><td>conventional</td><td>adj</td><td>thông thường, theo lối cũ</td><td>convention (n) → conventional (adj) → conventionally (adv) → unconventional (adj)</td></tr>
+            <tr><td>drawback</td><td>n</td><td>nhược điểm, hạn chế</td><td>drawback (n) → drawback of/to (collocation)</td></tr>
+            <tr><td>spontaneous</td><td>adj</td><td>tự phát, ngẫu hứng, không dàn dựng</td><td>spontaneous (adj) → spontaneity (n) → spontaneously (adv)</td></tr>
+            <tr><td>reproduce</td><td>v</td><td>tái tạo, sao chép lại</td><td>reproduce (v) → reproduction (n) → reproducible (adj) → reproductive (adj)</td></tr>
+            <tr><td>blur</td><td>v / n</td><td>làm mờ, làm nhòe; sự mờ nhòe</td><td>blur (v/n) → blurred (adj) → blurry (adj)</td></tr>
+            <tr><td>boundary</td><td>n</td><td>ranh giới, giới hạn</td><td>bound (n/v) → boundary (n) → boundless (adj)</td></tr>
+            <tr><td>isolated</td><td>adj</td><td>bị cô lập, tách biệt</td><td>isolate (v) → isolation (n) → isolated (adj) → isolationist (n)</td></tr>
+            <tr><td>proximity</td><td>n</td><td>sự gần gũi (về khoảng cách/vị trí)</td><td>proximate (adj) → proximity (n) → approximate (adj/v) → approximately (adv)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- ==================== PART 2: USE OF ENGLISH ================= -->
+  <!-- ============================================================= -->
+  <section class="card">
+    <h2 class="section-title">PART 2 — USE OF ENGLISH (GRAMMAR &amp; VOCABULARY)</h2>
+    <p class="section-desc">30 câu trắc nghiệm bao phủ: 12 thì, bị động, tường thuật, word form, điều kiện, mệnh đề quan hệ, gerund/infinitive, so sánh.</p>
+
+    <!-- ========== NHÓM 1: 12 THÌ (Câu 11–22) ========== -->
+    <details class="extra is-locked" open>
+      <summary>⏱️ Nhóm A — 12 thì trong tiếng Anh (Câu 11–22)</summary>
+
+      <!-- Q11 – Present Simple -->
+      <div class="question" data-qid="g1" data-answer="B" style="margin-top:16px;">
+        <p class="q-text"><span class="q-num">11</span>The sun ______ in the east and sets in the west.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g1" value="A"><span class="opt-key">A.</span><span class="opt-text">rise</span></label>
+          <label class="option"><input type="radio" name="g1" value="B"><span class="opt-key">B.</span><span class="opt-text">rises</span></label>
+          <label class="option"><input type="radio" name="g1" value="C"><span class="opt-key">C.</span><span class="opt-text">is rising</span></label>
+          <label class="option"><input type="radio" name="g1" value="D"><span class="opt-key">D.</span><span class="opt-text">rose</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B — Present Simple</span>
+          <p><strong>Vì sao B đúng:</strong> Diễn tả một <em>chân lý, sự thật hiển nhiên</em> (the sun rises in the east). Chủ ngữ “the sun” số ít → động từ thêm “-s”: rises.</p>
+          <p><strong>Vì sao A sai:</strong> “rise” là dạng nguyên thể, không chia cho chủ ngữ số ít.</p>
+          <p><strong>Vì sao C sai:</strong> Hiện tại tiếp diễn dùng cho hành động đang xảy ra, không dùng cho chân lý.</p>
+          <p><strong>Vì sao D sai:</strong> Quá khứ đơn “rose” không phù hợp vì đây là sự thật luôn đúng.</p>
+        </div>
+      </div>
+
+      <!-- Q12 – Present Continuous -->
+      <div class="question" data-qid="g2" data-answer="C">
+        <p class="q-text"><span class="q-num">12</span>Look! The children ______ in the garden.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g2" value="A"><span class="opt-key">A.</span><span class="opt-text">play</span></label>
+          <label class="option"><input type="radio" name="g2" value="B"><span class="opt-key">B.</span><span class="opt-text">plays</span></label>
+          <label class="option"><input type="radio" name="g2" value="C"><span class="opt-key">C.</span><span class="opt-text">are playing</span></label>
+          <label class="option"><input type="radio" name="g2" value="D"><span class="opt-key">D.</span><span class="opt-text">played</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: C — Present Continuous</span>
+          <p><strong>Vì sao C đúng:</strong> Từ cảm thán “Look!” báo hiệu hành động đang diễn ra ngay lúc nói → dùng hiện tại tiếp diễn: are playing. Chủ ngữ “The children” số nhiều → “are”.</p>
+          <p><strong>Vì sao A sai:</strong> “play” (hiện tại đơn) diễn tả thói quen, không phù hợp với “Look!”.</p>
+          <p><strong>Vì sao B sai:</strong> “plays” vừa sai thì vừa sai số (children là số nhiều).</p>
+          <p><strong>Vì sao D sai:</strong> Quá khứ đơn không khớp với ngữ cảnh “Look!” chỉ hiện tại.</p>
+        </div>
+      </div>
+
+      <!-- Q13 – Present Perfect -->
+      <div class="question" data-qid="g3" data-answer="C">
+        <p class="q-text"><span class="q-num">13</span>I ______ this book three times already.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g3" value="A"><span class="opt-key">A.</span><span class="opt-text">read</span></label>
+          <label class="option"><input type="radio" name="g3" value="B"><span class="opt-key">B.</span><span class="opt-text">am reading</span></label>
+          <label class="option"><input type="radio" name="g3" value="C"><span class="opt-key">C.</span><span class="opt-text">have read</span></label>
+          <label class="option"><input type="radio" name="g3" value="D"><span class="opt-key">D.</span><span class="opt-text">had read</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: C — Present Perfect</span>
+          <p><strong>Vì sao C đúng:</strong> Trạng từ “already” và cụm “three times” chỉ <em>kinh nghiệm tính đến hiện tại</em> → dùng hiện tại hoàn thành: have read.</p>
+          <p><strong>Vì sao A sai:</strong> Quá khứ đơn “read” chỉ nói một lần trong quá khứ, không nhấn mạnh kinh nghiệm tích lũy.</p>
+          <p><strong>Vì sao B sai:</strong> Hiện tại tiếp diễn không dùng với “already” chỉ số lần.</p>
+          <p><strong>Vì sao D sai:</strong> Quá khứ hoàn thành cần một mốc quá khứ khác để so sánh, ở đây không có.</p>
+        </div>
+      </div>
+
+      <!-- Q14 – Present Perfect Continuous -->
+      <div class="question" data-qid="g4" data-answer="C">
+        <p class="q-text"><span class="q-num">14</span>She ______ for this company since 2015.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g4" value="A"><span class="opt-key">A.</span><span class="opt-text">works</span></label>
+          <label class="option"><input type="radio" name="g4" value="B"><span class="opt-key">B.</span><span class="opt-text">is working</span></label>
+          <label class="option"><input type="radio" name="g4" value="C"><span class="opt-key">C.</span><span class="opt-text">has been working</span></label>
+          <label class="option"><input type="radio" name="g4" value="D"><span class="opt-key">D.</span><span class="opt-text">worked</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: C — Present Perfect Continuous</span>
+          <p><strong>Vì sao C đúng:</strong> “since 2015” chỉ mốc thời gian bắt đầu và hành động <em>vẫn đang tiếp diễn</em> → dùng hiện tại hoàn thành tiếp diễn: has been working. Nhấn mạnh tính liên tục.</p>
+          <p><strong>Vì sao A sai:</strong> Hiện tại đơn không đi với “since + mốc thời gian”.</p>
+          <p><strong>Vì sao B sai:</strong> Hiện tại tiếp diễn không dùng với “since” chỉ khoảng thời gian kéo dài.</p>
+          <p><strong>Vì sao D sai:</strong> Quá khứ đơn không phù hợp vì cô ấy vẫn đang làm việc ở đó.</p>
+        </div>
+      </div>
+
+      <!-- Q15 – Past Simple -->
+      <div class="question" data-qid="g5" data-answer="C">
+        <p class="q-text"><span class="q-num">15</span>We ______ to Da Nang last summer.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g5" value="A"><span class="opt-key">A.</span><span class="opt-text">go</span></label>
+          <label class="option"><input type="radio" name="g5" value="B"><span class="opt-key">B.</span><span class="opt-text">have gone</span></label>
+          <label class="option"><input type="radio" name="g5" value="C"><span class="opt-key">C.</span><span class="opt-text">went</span></label>
+          <label class="option"><input type="radio" name="g5" value="D"><span class="opt-key">D.</span><span class="opt-text">were going</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: C — Past Simple</span>
+          <p><strong>Vì sao C đúng:</strong> “last summer” là mốc thời gian quá khứ xác định, đã kết thúc → dùng quá khứ đơn: went.</p>
+          <p><strong>Vì sao A sai:</strong> Hiện tại đơn không đi với “last summer”.</p>
+          <p><strong>Vì sao B sai:</strong> Hiện tại hoàn thành không dùng với mốc thời gian quá khứ cụ thể như “last summer”.</p>
+          <p><strong>Vì sao D sai:</strong> Quá khứ tiếp diễn diễn tả hành động đang xảy ra tại một thời điểm, không phù hợp với chuyến đi đã hoàn tất.</p>
+        </div>
+      </div>
+
+      <!-- Q16 – Past Continuous -->
+      <div class="question" data-qid="g6" data-answer="B">
+        <p class="q-text"><span class="q-num">16</span>While I ______ dinner, the phone rang.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g6" value="A"><span class="opt-key">A.</span><span class="opt-text">cooked</span></label>
+          <label class="option"><input type="radio" name="g6" value="B"><span class="opt-key">B.</span><span class="opt-text">was cooking</span></label>
+          <label class="option"><input type="radio" name="g6" value="C"><span class="opt-key">C.</span><span class="opt-text">have cooked</span></label>
+          <label class="option"><input type="radio" name="g6" value="D"><span class="opt-key">D.</span><span class="opt-text">had cooked</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B — Past Continuous</span>
+          <p><strong>Vì sao B đúng:</strong> Cấu trúc “While + S + was/were + V-ing, S + V2/ed”: hành động đang diễn ra (was cooking) thì hành động khác xen vào (rang).</p>
+          <p><strong>Vì sao A sai:</strong> Quá khứ đơn “cooked” không diễn tả được hành động đang kéo dài.</p>
+          <p><strong>Vì sao C sai:</strong> Hiện tại hoàn thành không kết hợp với “while” trong ngữ cảnh quá khứ.</p>
+          <p><strong>Vì sao D sai:</strong> Quá khứ hoàn thành diễn tả hành động xảy ra <em>trước</em> một hành động quá khứ khác, không phù hợp.</p>
+        </div>
+      </div>
+
+      <!-- Q17 – Past Perfect -->
+      <div class="question" data-qid="g7" data-answer="C">
+        <p class="q-text"><span class="q-num">17</span>By the time we arrived, the film ______.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g7" value="A"><span class="opt-key">A.</span><span class="opt-text">started</span></label>
+          <label class="option"><input type="radio" name="g7" value="B"><span class="opt-key">B.</span><span class="opt-text">has started</span></label>
+          <label class="option"><input type="radio" name="g7" value="C"><span class="opt-key">C.</span><span class="opt-text">had started</span></label>
+          <label class="option"><input type="radio" name="g7" value="D"><span class="opt-key">D.</span><span class="opt-text">was starting</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: C — Past Perfect</span>
+          <p><strong>Vì sao C đúng:</strong> “By the time + S + V2/ed” → hành động xảy ra <em>trước</em> một hành động quá khứ khác dùng quá khứ hoàn thành: had started. Phim đã bắt đầu trước khi chúng tôi đến.</p>
+          <p><strong>Vì sao A sai:</strong> Quá khứ đơn không thể hiện được thứ tự trước–sau.</p>
+          <p><strong>Vì sao B sai:</strong> Hiện tại hoàn thành không dùng với “by the time” ở quá khứ.</p>
+          <p><strong>Vì sao D sai:</strong> Quá khứ tiếp diễn không phù hợp với ý “đã bắt đầu xong rồi”.</p>
+        </div>
+      </div>
+
+      <!-- Q18 – Past Perfect Continuous -->
+      <div class="question" data-qid="g8" data-answer="D">
+        <p class="q-text"><span class="q-num">18</span>He ______ for hours before he finally took a break.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g8" value="A"><span class="opt-key">A.</span><span class="opt-text">worked</span></label>
+          <label class="option"><input type="radio" name="g8" value="B"><span class="opt-key">B.</span><span class="opt-text">was working</span></label>
+          <label class="option"><input type="radio" name="g8" value="C"><span class="opt-key">C.</span><span class="opt-text">has been working</span></label>
+          <label class="option"><input type="radio" name="g8" value="D"><span class="opt-key">D.</span><span class="opt-text">had been working</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: D — Past Perfect Continuous</span>
+          <p><strong>Vì sao D đúng:</strong> “before he finally took a break” — hành động làm việc kéo dài <em>trước</em> một hành động quá khứ khác (took a break) → dùng quá khứ hoàn thành tiếp diễn: had been working. Nhấn mạnh tính liên tục và thời lượng.</p>
+          <p><strong>Vì sao A sai:</strong> Quá khứ đơn không thể hiện tính kéo dài trước một mốc quá khứ khác.</p>
+          <p><strong>Vì sao B sai:</strong> Quá khứ tiếp diễn chỉ hành động đang xảy ra tại một thời điểm, không nhấn mạnh “trước đó”.</p>
+          <p><strong>Vì sao C sai:</strong> Hiện tại hoàn thành tiếp diễn không phù hợp vì câu ở quá khứ.</p>
+        </div>
+      </div>
+
+      <!-- Q19 – Future Simple -->
+      <div class="question" data-qid="g9" data-answer="B">
+        <p class="q-text"><span class="q-num">19</span>I promise I ______ you tomorrow.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g9" value="A"><span class="opt-key">A.</span><span class="opt-text">call</span></label>
+          <label class="option"><input type="radio" name="g9" value="B"><span class="opt-key">B.</span><span class="opt-text">will call</span></label>
+          <label class="option"><input type="radio" name="g9" value="C"><span class="opt-key">C.</span><span class="opt-text">am calling</span></label>
+          <label class="option"><input type="radio" name="g9" value="D"><span class="opt-key">D.</span><span class="opt-text">would call</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B — Future Simple</span>
+          <p><strong>Vì sao B đúng:</strong> Lời hứa (“I promise”) diễn tả quyết định tại thời điểm nói về tương lai → dùng tương lai đơn: will call.</p>
+          <p><strong>Vì sao A sai:</strong> Hiện tại đơn không dùng để diễn tả lời hứa.</p>
+          <p><strong>Vì sao C sai:</strong> Hiện tại tiếp diễn diễn tả kế hoạch đã sắp xếp, không phải lời hứa.</p>
+          <p><strong>Vì sao D sai:</strong> “would call” là tương lai trong quá khứ, không phù hợp.</p>
+        </div>
+      </div>
+
+      <!-- Q20 – Future Continuous -->
+      <div class="question" data-qid="g10" data-answer="B">
+        <p class="q-text"><span class="q-num">20</span>This time tomorrow, we ______ on the beach.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g10" value="A"><span class="opt-key">A.</span><span class="opt-text">will lie</span></label>
+          <label class="option"><input type="radio" name="g10" value="B"><span class="opt-key">B.</span><span class="opt-text">will be lying</span></label>
+          <label class="option"><input type="radio" name="g10" value="C"><span class="opt-key">C.</span><span class="opt-text">are lying</span></label>
+          <label class="option"><input type="radio" name="g10" value="D"><span class="opt-key">D.</span><span class="opt-text">lie</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B — Future Continuous</span>
+          <p><strong>Vì sao B đúng:</strong> “This time tomorrow” chỉ một thời điểm cụ thể trong tương lai, hành động đang diễn ra tại thời điểm đó → tương lai tiếp diễn: will be lying.</p>
+          <p><strong>Vì sao A sai:</strong> Tương lai đơn chỉ hành động sẽ xảy ra, không nhấn mạnh “đang diễn ra tại một thời điểm”.</p>
+          <p><strong>Vì sao C sai:</strong> Hiện tại tiếp diễn không diễn tả tương lai ở đây.</p>
+          <p><strong>Vì sao D sai:</strong> Hiện tại đơn không phù hợp.</p>
+        </div>
+      </div>
+
+      <!-- Q21 – Future Perfect -->
+      <div class="question" data-qid="g11" data-answer="C">
+        <p class="q-text"><span class="q-num">21</span>By 2030, scientists ______ a cure for the disease.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g11" value="A"><span class="opt-key">A.</span><span class="opt-text">will find</span></label>
+          <label class="option"><input type="radio" name="g11" value="B"><span class="opt-key">B.</span><span class="opt-text">will be finding</span></label>
+          <label class="option"><input type="radio" name="g11" value="C"><span class="opt-key">C.</span><span class="opt-text">will have found</span></label>
+          <label class="option"><input type="radio" name="g11" value="D"><span class="opt-key">D.</span><span class="opt-text">find</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: C — Future Perfect</span>
+          <p><strong>Vì sao C đúng:</strong> “By 2030” chỉ mốc tương lai mà hành động sẽ <em>hoàn tất trước</em> đó → tương lai hoàn thành: will have found.</p>
+          <p><strong>Vì sao A sai:</strong> Tương lai đơn không nhấn mạnh sự hoàn tất trước mốc thời gian.</p>
+          <p><strong>Vì sao B sai:</strong> Tương lai tiếp diễn không phù hợp với “by + mốc thời gian”.</p>
+          <p><strong>Vì sao D sai:</strong> Hiện tại đơn không diễn tả tương lai hoàn thành.</p>
+        </div>
+      </div>
+
+      <!-- Q22 – Future Perfect Continuous -->
+      <div class="question" data-qid="g12" data-answer="D">
+        <p class="q-text"><span class="q-num">22</span>By next month, she ______ in this city for ten years.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g12" value="A"><span class="opt-key">A.</span><span class="opt-text">will live</span></label>
+          <label class="option"><input type="radio" name="g12" value="B"><span class="opt-key">B.</span><span class="opt-text">will be living</span></label>
+          <label class="option"><input type="radio" name="g12" value="C"><span class="opt-key">C.</span><span class="opt-text">will have lived</span></label>
+          <label class="option"><input type="radio" name="g12" value="D"><span class="opt-key">D.</span><span class="opt-text">will have been living</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: D — Future Perfect Continuous</span>
+          <p><strong>Vì sao D đúng:</strong> “By next month… for ten years” nhấn mạnh <em>thời lượng kéo dài</em> của hành động tính đến một mốc trong tương lai → tương lai hoàn thành tiếp diễn: will have been living.</p>
+          <p><strong>Vì sao A sai:</strong> Tương lai đơn không diễn tả thời lượng kéo dài.</p>
+          <p><strong>Vì sao B sai:</strong> Tương lai tiếp diễn chỉ hành động đang xảy ra tại một thời điểm, không nhấn mạnh “for + khoảng thời gian”.</p>
+          <p><strong>Vì sao C sai:</strong> Tương lai hoàn thành (will have lived) nhấn mạnh kết quả hoàn tất, trong khi câu này nhấn mạnh tính liên tục → D chính xác hơn.</p>
+        </div>
+      </div>
+
+    </details>
+
+    <!-- ========== NHÓM 2: BỊ ĐỘNG (Câu 23–25) ========== -->
+    <details class="extra is-locked" open>
+      <summary>🔄 Nhóm B — Câu bị động (Passive Voice) (Câu 23–25)</summary>
+
+      <!-- Q23 – Passive Future Simple -->
+      <div class="question" data-qid="g13" data-answer="B" style="margin-top:16px;">
+        <p class="q-text"><span class="q-num">23</span>The new bridge ______ by the end of next year.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g13" value="A"><span class="opt-key">A.</span><span class="opt-text">will complete</span></label>
+          <label class="option"><input type="radio" name="g13" value="B"><span class="opt-key">B.</span><span class="opt-text">will be completed</span></label>
+          <label class="option"><input type="radio" name="g13" value="C"><span class="opt-key">C.</span><span class="opt-text">will have completed</span></label>
+          <label class="option"><input type="radio" name="g13" value="D"><span class="opt-key">D.</span><span class="opt-text">is completing</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B — Passive Future Simple</span>
+          <p><strong>Vì sao B đúng:</strong> Chủ ngữ “The new bridge” là <em>đối tượng bị tác động</em> (được hoàn thành), không tự thực hiện hành động → dùng bị động. Cấu trúc: will be + V3/ed = will be completed.</p>
+          <p><strong>Vì sao A sai:</strong> “will complete” là chủ động — cây cầu không tự hoàn thành chính nó.</p>
+          <p><strong>Vì sao C sai:</strong> “will have completed” là chủ động tương lai hoàn thành, sai nghĩa.</p>
+          <p><strong>Vì sao D sai:</strong> Hiện tại tiếp diễn không phù hợp với “by the end of next year”.</p>
+        </div>
+      </div>
+
+      <!-- Q24 – Passive Past Simple -->
+      <div class="question" data-qid="g14" data-answer="B">
+        <p class="q-text"><span class="q-num">24</span>The report ______ by the manager yesterday.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g14" value="A"><span class="opt-key">A.</span><span class="opt-text">signed</span></label>
+          <label class="option"><input type="radio" name="g14" value="B"><span class="opt-key">B.</span><span class="opt-text">was signed</span></label>
+          <label class="option"><input type="radio" name="g14" value="C"><span class="opt-key">C.</span><span class="opt-text">has signed</span></label>
+          <label class="option"><input type="radio" name="g14" value="D"><span class="opt-key">D.</span><span class="opt-text">is signed</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B — Passive Past Simple</span>
+          <p><strong>Vì sao B đúng:</strong> “The report” là đối tượng được ký (không tự ký), và “yesterday” chỉ quá khứ → bị động quá khứ đơn: was signed.</p>
+          <p><strong>Vì sao A sai:</strong> “signed” là chủ động quá khứ đơn; báo cáo không tự ký.</p>
+          <p><strong>Vì sao C sai:</strong> Hiện tại hoàn thành không đi với “yesterday”.</p>
+          <p><strong>Vì sao D sai:</strong> Hiện tại đơn không đi với “yesterday”.</p>
+        </div>
+      </div>
+
+      <!-- Q25 – Passive Present Simple -->
+      <div class="question" data-qid="g15" data-answer="C">
+        <p class="q-text"><span class="q-num">25</span>English ______ all over the world.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g15" value="A"><span class="opt-key">A.</span><span class="opt-text">speaks</span></label>
+          <label class="option"><input type="radio" name="g15" value="B"><span class="opt-key">B.</span><span class="opt-text">is speaking</span></label>
+          <label class="option"><input type="radio" name="g15" value="C"><span class="opt-key">C.</span><span class="opt-text">is spoken</span></label>
+          <label class="option"><input type="radio" name="g15" value="D"><span class="opt-key">D.</span><span class="opt-text">has spoken</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: C — Passive Present Simple</span>
+          <p><strong>Vì sao C đúng:</strong> “English” là ngôn ngữ <em>được nói</em> bởi mọi người, không tự nói → bị động hiện tại đơn: is spoken.</p>
+          <p><strong>Vì sao A sai:</strong> “speaks” là chủ động — sai nghĩa.</p>
+          <p><strong>Vì sao B sai:</strong> Hiện tại tiếp diễn chủ động, sai nghĩa và sai thì.</p>
+          <p><strong>Vì sao D sai:</strong> Hiện tại hoàn thành chủ động, sai nghĩa.</p>
+        </div>
+      </div>
+    </details>
+
+    <!-- ========== NHÓM 3: TƯỜNG THUẬT (Câu 26–28) ========== -->
+    <details class="extra is-locked" open>
+      <summary>💬 Nhóm C — Câu tường thuật (Reported Speech) (Câu 26–28)</summary>
+
+      <!-- Q26 -->
+      <div class="question" data-qid="g16" data-answer="B" style="margin-top:16px;">
+        <p class="q-text"><span class="q-num">26</span>She said, “I am tired.” → She said that she ______ tired.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g16" value="A"><span class="opt-key">A.</span><span class="opt-text">is</span></label>
+          <label class="option"><input type="radio" name="g16" value="B"><span class="opt-key">B.</span><span class="opt-text">was</span></label>
+          <label class="option"><input type="radio" name="g16" value="C"><span class="opt-key">C.</span><span class="opt-text">has been</span></label>
+          <label class="option"><input type="radio" name="g16" value="D"><span class="opt-key">D.</span><span class="opt-text">will be</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B</span>
+          <p><strong>Vì sao B đúng:</strong> Khi chuyển từ trực tiếp sang gián tiếp, thì hiện tại đơn (am) phải <em>lùi thì</em> về quá khứ đơn (was).</p>
+          <p><strong>Vì sao A sai:</strong> Không lùi thì là lỗi phổ biến.</p>
+          <p><strong>Vì sao C sai:</strong> “has been” là hiện tại hoàn thành, không phải kết quả của lùi thì từ “am”.</p>
+          <p><strong>Vì sao D sai:</strong> “will be” là tương lai, không đúng quy tắc lùi thì.</p>
+        </div>
+      </div>
+
+      <!-- Q27 -->
+      <div class="question" data-qid="g17" data-answer="B">
+        <p class="q-text"><span class="q-num">27</span>He asked me, “Where do you live?” → He asked me where I ______.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g17" value="A"><span class="opt-key">A.</span><span class="opt-text">live</span></label>
+          <label class="option"><input type="radio" name="g17" value="B"><span class="opt-key">B.</span><span class="opt-text">lived</span></label>
+          <label class="option"><input type="radio" name="g17" value="C"><span class="opt-key">C.</span><span class="opt-text">do live</span></label>
+          <label class="option"><input type="radio" name="g17" value="D"><span class="opt-key">D.</span><span class="opt-text">am living</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B</span>
+          <p><strong>Vì sao B đúng:</strong> Câu hỏi chuyển sang gián tiếp: lùi thì hiện tại đơn (do you live) → quá khứ đơn (lived), và bỏ trợ động từ “do”, đổi trật tự thành S + V.</p>
+          <p><strong>Vì sao A sai:</strong> Không lùi thì.</p>
+          <p><strong>Vì sao C sai:</strong> Giữ trợ động từ “do” trong câu gián tiếp là sai.</p>
+          <p><strong>Vì sao D sai:</strong> Không đúng quy tắc lùi thì.</p>
+        </div>
+      </div>
+
+      <!-- Q28 -->
+      <div class="question" data-qid="g18" data-answer="A">
+        <p class="q-text"><span class="q-num">28</span>The teacher told us, “Don't be late.” → The teacher told us ______ late.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g18" value="A"><span class="opt-key">A.</span><span class="opt-text">not to be</span></label>
+          <label class="option"><input type="radio" name="g18" value="B"><span class="opt-key">B.</span><span class="opt-text">to not be</span></label>
+          <label class="option"><input type="radio" name="g18" value="C"><span class="opt-key">C.</span><span class="opt-text">don't be</span></label>
+          <label class="option"><input type="radio" name="g18" value="D"><span class="opt-key">D.</span><span class="opt-text">not being</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: A</span>
+          <p><strong>Vì sao A đúng:</strong> Câu mệnh lệnh phủ định chuyển sang gián tiếp dùng cấu trúc: <em>told + O + not to + V</em>. Vậy “not to be” là đúng.</p>
+          <p><strong>Vì sao B sai:</strong> Trật tự sai — phải là “not to be”, không phải “to not be”.</p>
+          <p><strong>Vì sao C sai:</strong> Giữ nguyên “don't” là sai trong câu gián tiếp.</p>
+          <p><strong>Vì sao D sai:</strong> “not being” không đúng cấu trúc.</p>
+        </div>
+      </div>
+    </details>
+
+    <!-- ========== NHÓM 4: WORD FORM (Câu 29–32) ========== -->
+    <details class="extra is-locked" open>
+      <summary>🔤 Nhóm D — Word Form (Câu 29–32)</summary>
+
+      <!-- Q29 -->
+      <div class="question" data-qid="g19" data-answer="B" style="margin-top:16px;">
+        <p class="q-text"><span class="q-num">29</span>Her ______ to the project was invaluable.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g19" value="A"><span class="opt-key">A.</span><span class="opt-text">contribute</span></label>
+          <label class="option"><input type="radio" name="g19" value="B"><span class="opt-key">B.</span><span class="opt-text">contribution</span></label>
+          <label class="option"><input type="radio" name="g19" value="C"><span class="opt-key">C.</span><span class="opt-text">contributive</span></label>
+          <label class="option"><input type="radio" name="g19" value="D"><span class="opt-key">D.</span><span class="opt-text">contributing</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B</span>
+          <p><strong>Vì sao B đúng:</strong> Sau tính từ sở hữu “Her” cần một <strong>danh từ</strong>. “contribution” (sự đóng góp) là danh từ phù hợp.</p>
+          <p><strong>Vì sao A sai:</strong> “contribute” là động từ, không đứng sau “Her”.</p>
+          <p><strong>Vì sao C sai:</strong> “contributive” là tính từ, không phù hợp.</p>
+          <p><strong>Vì sao D sai:</strong> “contributing” là dạng V-ing, không phải danh từ.</p>
+        </div>
+      </div>
+
+      <!-- Q30 -->
+      <div class="question" data-qid="g20" data-answer="C">
+        <p class="q-text"><span class="q-num">30</span>The company is looking for highly ______ candidates.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g20" value="A"><span class="opt-key">A.</span><span class="opt-text">motivate</span></label>
+          <label class="option"><input type="radio" name="g20" value="B"><span class="opt-key">B.</span><span class="opt-text">motivation</span></label>
+          <label class="option"><input type="radio" name="g20" value="C"><span class="opt-key">C.</span><span class="opt-text">motivated</span></label>
+          <label class="option"><input type="radio" name="g20" value="D"><span class="opt-key">D.</span><span class="opt-text">motivating</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: C</span>
+          <p><strong>Vì sao C đúng:</strong> Cần một <strong>tính từ</strong> bổ nghĩa cho danh từ “candidates”. “motivated” (có động lực) là tính từ miêu tả người, phù hợp.</p>
+          <p><strong>Vì sao A sai:</strong> “motivate” là động từ.</p>
+          <p><strong>Vì sao B sai:</strong> “motivation” là danh từ, không bổ nghĩa cho “candidates”.</p>
+          <p><strong>Vì sao D sai:</strong> “motivating” (tính từ đuôi -ing) miêu tả vật/việc gây động lực, không miêu tả người.</p>
+        </div>
+      </div>
+
+      <!-- Q31 -->
+      <div class="question" data-qid="g21" data-answer="C">
+        <p class="q-text"><span class="q-num">31</span>Air ______ is a serious problem in big cities.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g21" value="A"><span class="opt-key">A.</span><span class="opt-text">pollute</span></label>
+          <label class="option"><input type="radio" name="g21" value="B"><span class="opt-key">B.</span><span class="opt-text">polluted</span></label>
+          <label class="option"><input type="radio" name="g21" value="C"><span class="opt-key">C.</span><span class="opt-text">pollution</span></label>
+          <label class="option"><input type="radio" name="g21" value="D"><span class="opt-key">D.</span><span class="opt-text">pollutant</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: C</span>
+          <p><strong>Vì sao C đúng:</strong> “Air pollution” = ô nhiễm không khí — cụm danh từ cố định. “pollution” là danh từ không đếm được.</p>
+          <p><strong>Vì sao A sai:</strong> “pollute” là động từ.</p>
+          <p><strong>Vì sao B sai:</strong> “polluted” là tính từ/V3, không đứng sau “Air” trong cụm này.</p>
+          <p><strong>Vì sao D sai:</strong> “pollutant” = chất gây ô nhiễm (danh từ đếm được), không phù hợp với “Air ___ is a problem”.</p>
+        </div>
+      </div>
+
+      <!-- Q32 -->
+      <div class="question" data-qid="g22" data-answer="B">
+        <p class="q-text"><span class="q-num">32</span>He spoke with great ______ about his future plans.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g22" value="A"><span class="opt-key">A.</span><span class="opt-text">confident</span></label>
+          <label class="option"><input type="radio" name="g22" value="B"><span class="opt-key">B.</span><span class="opt-text">confidence</span></label>
+          <label class="option"><input type="radio" name="g22" value="C"><span class="opt-key">C.</span><span class="opt-text">confidently</span></label>
+          <label class="option"><input type="radio" name="g22" value="D"><span class="opt-key">D.</span><span class="opt-text">confidential</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B</span>
+          <p><strong>Vì sao B đúng:</strong> Sau tính từ “great” cần một <strong>danh từ</strong>. “confidence” (sự tự tin) là danh từ phù hợp.</p>
+          <p><strong>Vì sao A sai:</strong> “confident” là tính từ.</p>
+          <p><strong>Vì sao C sai:</strong> “confidently” là trạng từ.</p>
+          <p><strong>Vì sao D sai:</strong> “confidential” = bảo mật, khác nghĩa hoàn toàn.</p>
+        </div>
+      </div>
+    </details>
+
+    <!-- ========== NHÓM 5: ĐIỀU KIỆN (Câu 33–35) ========== -->
+    <details class="extra is-locked" open>
+      <summary>🔀 Nhóm E — Câu điều kiện (Conditionals) (Câu 33–35)</summary>
+
+      <!-- Q33 -->
+      <div class="question" data-qid="g23" data-answer="C" style="margin-top:16px;">
+        <p class="q-text"><span class="q-num">33</span>If I ______ you, I would accept the offer.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g23" value="A"><span class="opt-key">A.</span><span class="opt-text">am</span></label>
+          <label class="option"><input type="radio" name="g23" value="B"><span class="opt-key">B.</span><span class="opt-text">was</span></label>
+          <label class="option"><input type="radio" name="g23" value="C"><span class="opt-key">C.</span><span class="opt-text">were</span></label>
+          <label class="option"><input type="radio" name="g23" value="D"><span class="opt-key">D.</span><span class="opt-text">had been</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: C</span>
+          <p><strong>Vì sao C đúng:</strong> Câu điều kiện loại 2 (trái với hiện tại): <em>If + S + were, S + would + V</em>. Với động từ “to be”, dùng “were” cho mọi ngôi.</p>
+          <p><strong>Vì sao A sai:</strong> “am” không dùng trong câu điều kiện loại 2.</p>
+          <p><strong>Vì sao B sai:</strong> “was” không chuẩn trong cấu trúc giả định (dù đôi khi gặp trong văn nói thông tục).</p>
+          <p><strong>Vì sao D sai:</strong> “had been” là điều kiện loại 3, không khớp với “would accept”.</p>
+        </div>
+      </div>
+
+      <!-- Q34 -->
+      <div class="question" data-qid="g24" data-answer="B">
+        <p class="q-text"><span class="q-num">34</span>If she ______ harder, she would have passed the exam.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g24" value="A"><span class="opt-key">A.</span><span class="opt-text">studied</span></label>
+          <label class="option"><input type="radio" name="g24" value="B"><span class="opt-key">B.</span><span class="opt-text">had studied</span></label>
+          <label class="option"><input type="radio" name="g24" value="C"><span class="opt-key">C.</span><span class="opt-text">studies</span></label>
+          <label class="option"><input type="radio" name="g24" value="D"><span class="opt-key">D.</span><span class="opt-text">would study</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B</span>
+          <p><strong>Vì sao B đúng:</strong> Câu điều kiện loại 3 (trái với quá khứ): <em>If + S + had + V3/ed, S + would have + V3/ed</em>. Mệnh đề chính là “would have passed” → vế if phải là “had studied”.</p>
+          <p><strong>Vì sao A sai:</strong> “studied” là điều kiện loại 2, không khớp với “would have passed”.</p>
+          <p><strong>Vì sao C sai:</strong> “studies” là điều kiện loại 1.</p>
+          <p><strong>Vì sao D sai:</strong> “would study” không đứng trong mệnh đề if.</p>
+        </div>
+      </div>
+
+      <!-- Q35 -->
+      <div class="question" data-qid="g25" data-answer="A">
+        <p class="q-text"><span class="q-num">35</span>Unless you hurry, you ______ the train.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g25" value="A"><span class="opt-key">A.</span><span class="opt-text">will miss</span></label>
+          <label class="option"><input type="radio" name="g25" value="B"><span class="opt-key">B.</span><span class="opt-text">would miss</span></label>
+          <label class="option"><input type="radio" name="g25" value="C"><span class="opt-key">C.</span><span class="opt-text">missed</span></label>
+          <label class="option"><input type="radio" name="g25" value="D"><span class="opt-key">D.</span><span class="opt-text">have missed</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: A</span>
+          <p><strong>Vì sao A đúng:</strong> “Unless” = “If… not”. Câu điều kiện loại 1: <em>Unless + S + V(hiện tại đơn), S + will + V</em>. Vậy mệnh đề chính là “will miss”.</p>
+          <p><strong>Vì sao B sai:</strong> “would miss” là điều kiện loại 2, không khớp với “hurry” (hiện tại).</p>
+          <p><strong>Vì sao C sai:</strong> “missed” là quá khứ đơn.</p>
+          <p><strong>Vì sao D sai:</strong> “have missed” là hiện tại hoàn thành.</p>
+        </div>
+      </div>
+    </details>
+
+    <!-- ========== NHÓM 6: MỆNH ĐỀ QUAN HỆ (Câu 36–37) ========== -->
+    <details class="extra is-locked" open>
+      <summary>🔗 Nhóm F — Mệnh đề quan hệ (Relative Clauses) (Câu 36–37)</summary>
+
+      <!-- Q36 -->
+      <div class="question" data-qid="g26" data-answer="C" style="margin-top:16px;">
+        <p class="q-text"><span class="q-num">36</span>The woman ______ car was stolen called the police.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g26" value="A"><span class="opt-key">A.</span><span class="opt-text">who</span></label>
+          <label class="option"><input type="radio" name="g26" value="B"><span class="opt-key">B.</span><span class="opt-text">whom</span></label>
+          <label class="option"><input type="radio" name="g26" value="C"><span class="opt-key">C.</span><span class="opt-text">whose</span></label>
+          <label class="option"><input type="radio" name="g26" value="D"><span class="opt-key">D.</span><span class="opt-text">which</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: C</span>
+          <p><strong>Vì sao C đúng:</strong> “whose” chỉ <strong>sở hữu</strong> — “whose car” = chiếc xe của cô ấy. Đây là đại từ quan hệ duy nhất đứng trước danh từ để chỉ quan hệ sở hữu.</p>
+          <p><strong>Vì sao A sai:</strong> “who” thay cho người làm chủ ngữ, không chỉ sở hữu.</p>
+          <p><strong>Vì sao B sai:</strong> “whom” thay cho người làm tân ngữ.</p>
+          <p><strong>Vì sao D sai:</strong> “which” thay cho vật.</p>
+        </div>
+      </div>
+
+      <!-- Q37 -->
+      <div class="question" data-qid="g27" data-answer="B">
+        <p class="q-text"><span class="q-num">37</span>This is the restaurant ______ we first met.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g27" value="A"><span class="opt-key">A.</span><span class="opt-text">which</span></label>
+          <label class="option"><input type="radio" name="g27" value="B"><span class="opt-key">B.</span><span class="opt-text">where</span></label>
+          <label class="option"><input type="radio" name="g27" value="C"><span class="opt-key">C.</span><span class="opt-text">that</span></label>
+          <label class="option"><input type="radio" name="g27" value="D"><span class="opt-key">D.</span><span class="opt-text">who</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B</span>
+          <p><strong>Vì sao B đúng:</strong> “where” = trạng từ quan hệ chỉ <strong>nơi chốn</strong>. Câu đầy đủ: “This is the restaurant <em>where</em> we first met.” — đây là nhà hàng nơi chúng tôi gặp nhau lần đầu.</p>
+          <p><strong>Vì sao A sai:</strong> “which” thay cho vật, nhưng sau nó cần giới từ (in which) mới đúng, nếu không thì “we first met” thiếu trạng ngữ chỉ nơi chốn.</p>
+          <p><strong>Vì sao C sai:</strong> “that” có thể thay “which/where” trong một số trường hợp, nhưng ở đây nếu dùng “that” thì cần “that we first met in” — không tự nhiên.</p>
+          <p><strong>Vì sao D sai:</strong> “who” chỉ người.</p>
+        </div>
+      </div>
+    </details>
+
+    <!-- ========== NHÓM 7: GERUND / INFINITIVE (Câu 38–39) ========== -->
+    <details class="extra is-locked" open>
+      <summary>⚙️ Nhóm G — Gerund &amp; Infinitive (Câu 38–39)</summary>
+
+      <!-- Q38 -->
+      <div class="question" data-qid="g28" data-answer="C" style="margin-top:16px;">
+        <p class="q-text"><span class="q-num">38</span>She suggested ______ to the cinema.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g28" value="A"><span class="opt-key">A.</span><span class="opt-text">go</span></label>
+          <label class="option"><input type="radio" name="g28" value="B"><span class="opt-key">B.</span><span class="opt-text">to go</span></label>
+          <label class="option"><input type="radio" name="g28" value="C"><span class="opt-key">C.</span><span class="opt-text">going</span></label>
+          <label class="option"><input type="radio" name="g28" value="D"><span class="opt-key">D.</span><span class="opt-text">gone</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: C</span>
+          <p><strong>Vì sao C đúng:</strong> Sau động từ “suggest” dùng <strong>gerund (V-ing)</strong>: suggest + V-ing. Cấu trúc này rất phổ biến ở B2.</p>
+          <p><strong>Vì sao A sai:</strong> “go” là nguyên thể không “to”, không dùng sau “suggest”.</p>
+          <p><strong>Vì sao B sai:</strong> “suggest + to V” là lỗi sai kinh điển.</p>
+          <p><strong>Vì sao D sai:</strong> “gone” là V3, không đúng cấu trúc.</p>
+        </div>
+      </div>
+
+      <!-- Q39 -->
+      <div class="question" data-qid="g29" data-answer="B">
+        <p class="q-text"><span class="q-num">39</span>He decided ______ the job offer.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g29" value="A"><span class="opt-key">A.</span><span class="opt-text">accepting</span></label>
+          <label class="option"><input type="radio" name="g29" value="B"><span class="opt-key">B.</span><span class="opt-text">to accept</span></label>
+          <label class="option"><input type="radio" name="g29" value="C"><span class="opt-key">C.</span><span class="opt-text">accept</span></label>
+          <label class="option"><input type="radio" name="g29" value="D"><span class="opt-key">D.</span><span class="opt-text">accepted</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: B</span>
+          <p><strong>Vì sao B đúng:</strong> Sau “decide” dùng <strong>to-infinitive</strong>: decide + to V. Vậy “to accept” là đúng.</p>
+          <p><strong>Vì sao A sai:</strong> “decide + V-ing” không đúng.</p>
+          <p><strong>Vì sao C sai:</strong> “accept” nguyên thể không “to” không đứng sau “decide”.</p>
+          <p><strong>Vì sao D sai:</strong> “accepted” là V2/ed, không đúng cấu trúc.</p>
+        </div>
+      </div>
+    </details>
+
+    <!-- ========== NHÓM 8: SO SÁNH (Câu 40) ========== -->
+    <details class="extra is-locked" open>
+      <summary>📊 Nhóm H — So sánh (Comparisons) (Câu 40)</summary>
+
+      <!-- Q40 -->
+      <div class="question" data-qid="g30" data-answer="A" style="margin-top:16px;">
+        <p class="q-text"><span class="q-num">40</span>This is ______ film I have ever seen.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="g30" value="A"><span class="opt-key">A.</span><span class="opt-text">the best</span></label>
+          <label class="option"><input type="radio" name="g30" value="B"><span class="opt-key">B.</span><span class="opt-text">better</span></label>
+          <label class="option"><input type="radio" name="g30" value="C"><span class="opt-key">C.</span><span class="opt-text">the better</span></label>
+          <label class="option"><input type="radio" name="g30" value="D"><span class="opt-key">D.</span><span class="opt-text">good</span></label>
+        </div>
+        <div class="explanation" hidden>
+          <span class="exp-answer">Đáp án đúng: A</span>
+          <p><strong>Vì sao A đúng:</strong> Cấu trúc so sánh nhất: <em>the + superlative + N + (that) S + have ever + V3/ed</em>. “the best film I have ever seen” = bộ phim hay nhất tôi từng xem.</p>
+          <p><strong>Vì sao B sai:</strong> “better” là so sánh hơn, không dùng với “I have ever seen” (so sánh nhất).</p>
+          <p><strong>Vì sao C sai:</strong> “the better” chỉ dùng khi so sánh giữa hai đối tượng cụ thể.</p>
+          <p><strong>Vì sao D sai:</strong> “good” là tính từ nguyên cấp, không phải so sánh.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- ==================== PART 3: WRITING ======================== -->
+  <!-- ============================================================= -->
+  <section class="card">
+    <h2 class="section-title">PART 3 — WRITING</h2>
+    <p class="section-desc">Gồm 2 phần: Task 1 (viết thư/email ~120 từ) và Task 2 (viết luận ~250 từ). Gõ trực tiếp vào ô bên dưới.</p>
+
+    <!-- ================== TASK 1 ================== -->
+    <div class="task-block task1-block">
+      <h3 class="task-heading">✉️ Task 1 — Letter / Email</h3>
+
+      <div class="writing-task">
+        <span class="badge task1">Task 1 — Letter</span>
+        <p>
+          <strong>You recently stayed at a hotel during your holiday. Unfortunately, several things went wrong
+          during your stay. Write a letter to the hotel manager.</strong>
+        </p>
+        <p>In your letter:</p>
+        <ul class="clean" style="margin:6px 0 10px;">
+          <li>explain when you stayed and why you chose the hotel</li>
+          <li>describe at least two problems you experienced</li>
+          <li>say what action you would like the manager to take</li>
+        </ul>
+        <p style="color:#64748b; font-size:.9rem; margin-bottom:0;">
+          Write at least <strong>120 words</strong> in about <strong>20 minutes</strong>. Begin with “Dear Sir or Madam,”.
+        </p>
+      </div>
+
+      <!-- Ô làm bài Task 1 -->
+      <div class="writing-editor">
+        <label for="task1Input">✍️ Bài làm Task 1</label>
+        <textarea id="task1Input" placeholder="Dear Sir or Madam,&#10;&#10;I am writing to complain about…&#10;&#10;Yours faithfully,&#10;[Your name]"></textarea>
+        <div class="writing-meta">
+          <span class="word-count" id="wordCount1"><strong>0</strong> từ</span>
+          <span class="hint">Mục tiêu: ≥ 120 từ</span>
+        </div>
+      </div>
+
+      <details class="extra is-locked" open>
+        <summary>🧭 Dàn ý chi tiết – Task 1 (Letter of Complaint)</summary>
+
+        <h4 class="sub">I. Opening (1 câu)</h4>
+        <ul class="clean">
+          <li><strong>Lý do viết thư:</strong> “I am writing to express my dissatisfaction with my recent stay at your hotel.”</li>
+          <li>Nêu thời gian lưu trú: “I stayed at your hotel from 10 to 13 July 2025.”</li>
+        </ul>
+
+        <h4 class="sub">II. Body 1 — Lý do chọn khách sạn (1–2 câu)</h4>
+        <ul class="clean">
+          <li>“I chose your hotel because of its excellent reputation and central location.”</li>
+        </ul>
+
+        <h4 class="sub">III. Body 2 — Vấn đề gặp phải (2–3 câu)</h4>
+        <ul class="clean">
+          <li><strong>Problem 1:</strong> “First, the air conditioner in my room was not working, and despite reporting it twice, no one came to fix it.”</li>
+          <li><strong>Problem 2:</strong> “Second, the breakfast buffet ran out of food by 8 a.m., which was very disappointing.”</li>
+        </ul>
+
+        <h4 class="sub">IV. Body 3 — Yêu cầu hành động (1–2 câu)</h4>
+        <ul class="clean">
+          <li>“I would therefore like to request a partial refund or a complimentary voucher for a future stay.”</li>
+        </ul>
+
+        <h4 class="sub">V. Closing (1–2 câu)</h4>
+        <ul class="clean">
+          <li>“I look forward to hearing from you at your earliest convenience.”</li>
+          <li>“Yours faithfully, [Your name]”</li>
+        </ul>
+      </details>
+
+      <details class="extra is-locked">
+        <summary>💎 Từ vựng &amp; cấu trúc “ăn điểm” – Task 1</summary>
+
+        <h4 class="sub">1. Cụm từ mở đầu &amp; kết thúc</h4>
+        <ul class="clean">
+          <li>I am writing to complain about… / to express my dissatisfaction with…</li>
+          <li>I am writing with regard to… / in connection with…</li>
+          <li>I look forward to hearing from you. / I would appreciate a prompt reply.</li>
+          <li>Yours faithfully, (khi không biết tên) / Yours sincerely, (khi biết tên)</li>
+        </ul>
+
+        <h4 class="sub">2. Cấu trúc mô tả vấn đề</h4>
+        <ul class="clean">
+          <li>To my disappointment, … / Much to my surprise, …</li>
+          <li>Despite reporting the issue, no action was taken.</li>
+          <li>Not only was the room dirty, but the staff were also unhelpful.</li>
+        </ul>
+
+        <h4 class="sub">3. Cấu trúc yêu cầu hành động</h4>
+        <ul class="clean">
+          <li>I would therefore like to request…</li>
+          <li>I would be grateful if you could…</li>
+          <li>I trust that you will take the necessary steps to…</li>
+        </ul>
+      </details>
+
+      <details class="extra is-locked">
+        <summary>🚀 Tips làm Task 1</summary>
+        <div class="tip"><strong>1. Đúng format thư.</strong> Có lời chào, lý do viết, nội dung, yêu cầu, kết thúc và chữ ký. Thiếu phần nào sẽ mất điểm Task Achievement.</div>
+        <div class="tip"><strong>2. Bám sát 3 gạch đầu dòng của đề.</strong> Mỗi gạch đầu dòng nên có 1–2 câu triển khai. Không bỏ sót ý nào.</div>
+        <div class="tip"><strong>3. Giọng văn trang trọng (formal).</strong> Tránh viết tắt (I'm, don't), tránh từ quá thân mật (Hey, guys). Dùng “I am”, “do not”, “would like”.</div>
+        <div class="tip info"><strong>4. Độ dài hợp lý:</strong> 120–150 từ. Viết dưới 120 từ bị trừ điểm.</div>
+        <div class="tip warn"><strong>5. Đừng sa đà.</strong> Chỉ nêu 2 vấn đề là đủ. Nêu quá nhiều dễ lan man và sai ngữ pháp.</div>
+      </details>
+    </div>
+
+    <!-- ================== TASK 2 ================== -->
+    <div class="task-block task2-block">
+      <h3 class="task-heading">📝 Task 2 — Essay</h3>
+
+      <div class="writing-task">
+        <span class="badge task2">Task 2 — Essay</span>
+        <p>
+          <strong>Some people believe that working from home is more beneficial for employees, while others
+          argue that working in an office is better for both employees and employers.</strong>
+        </p>
+        <p><strong>Discuss both views and give your own opinion.</strong></p>
+        <p style="color:#64748b; font-size:.9rem; margin-bottom:0;">
+          Write at least <strong>250 words</strong> in about <strong>40 minutes</strong>.
+        </p>
+      </div>
+
+      <!-- Ô làm bài Task 2 -->
+      <div class="writing-editor">
+        <label for="task2Input">✍️ Bài làm Task 2</label>
+        <textarea id="task2Input" class="essay" placeholder="Type your essay here…&#10;&#10;Remember to:&#10;• Introduce the topic and state your thesis&#10;• Discuss both views with reasons and examples&#10;• Give your own opinion&#10;• Write a clear conclusion"></textarea>
+        <div class="writing-meta">
+          <span class="word-count" id="wordCount2"><strong>0</strong> từ</span>
+          <span class="hint">Mục tiêu: ≥ 250 từ</span>
+        </div>
+      </div>
+
+      <details class="extra is-locked" open>
+        <summary>🧭 Dàn ý chi tiết – Task 2 (Discussion Essay)</summary>
+
+        <h4 class="sub">I. Introduction (2–3 câu)</h4>
+        <ul class="clean">
+          <li><strong>Hook:</strong> Nêu bối cảnh — sự phát triển của công nghệ và đại dịch đã thay đổi cách con người làm việc.</li>
+          <li><strong>Paraphrase đề:</strong> “While some argue that remote work benefits employees, others maintain that office-based work is superior for both staff and organisations.”</li>
+          <li><strong>Thesis:</strong> “In my view, a hybrid model combining both is the most effective solution.”</li>
+        </ul>
+
+        <h4 class="sub">II. Body 1 — View 1: Working from home benefits employees</h4>
+        <ul class="clean">
+          <li><strong>Topic sentence:</strong> “Supporters of remote work emphasise the flexibility and cost savings it offers.”</li>
+          <li><strong>Idea 1:</strong> Tiết kiệm thời gian và chi phí đi lại → giảm căng thẳng, cân bằng công việc – cuộc sống.</li>
+          <li><strong>Idea 2:</strong> Quyền tự chủ cao hơn về giờ giấc, không gian làm việc → tăng năng suất với người tự kỷ luật tốt.</li>
+          <li><strong>Idea 3:</strong> Mở rộng cơ hội cho phụ huynh và người khuyết tật.</li>
+          <li><strong>Example:</strong> “A survey by a major recruitment site found that 60% of employees would resign if forced back to the office full-time.”</li>
+        </ul>
+
+        <h4 class="sub">III. Body 2 — View 2: Office work is better</h4>
+        <ul class="clean">
+          <li><strong>Topic sentence:</strong> “Conversely, others contend that the office remains indispensable for collaboration and career growth.”</li>
+          <li><strong>Idea 1:</strong> Giao tiếp trực tiếp thúc đẩy sáng tạo và giải quyết vấn đề nhanh hơn.</li>
+          <li><strong>Idea 2:</strong> Nhân viên mới dễ hòa nhập văn hóa công ty, được hướng dẫn trực tiếp.</li>
+          <li><strong>Idea 3:</strong> Ranh giới rõ ràng giữa công việc và đời tư → giảm nguy cơ kiệt sức (burnout).</li>
+          <li><strong>Example:</strong> “Many technology giants have recently required staff to return three days a week, citing weaker innovation.”</li>
+        </ul>
+
+        <h4 class="sub">IV. Body 3 — Your own opinion (bắt buộc trong đề “discuss both views”)</h4>
+        <ul class="clean">
+          <li><strong>Topic sentence:</strong> “Personally, I believe neither extreme is realistic; the hybrid approach is the best compromise.”</li>
+          <li><strong>Support:</strong> Kết hợp tự chủ khi làm ở nhà với tương tác trực tiếp khi đến văn phòng; đòi hỏi quản lý theo kết quả thay vì theo giờ ngồi.</li>
+        </ul>
+
+        <h4 class="sub">V. Conclusion (2 câu)</h4>
+        <ul class="clean">
+          <li>Tóm tắt hai quan điểm.</li>
+          <li>Khẳng định lại quan điểm cá nhân + đề xuất: “Employers should focus on outcomes rather than location.”</li>
+        </ul>
+      </details>
+
+      <details class="extra is-locked">
+        <summary>💎 Từ vựng &amp; cấu trúc “ăn điểm” – Task 2</summary>
+
+        <h4 class="sub">1. Từ vựng nâng cao (band B2+)</h4>
+        <ul class="clean">
+          <li><strong>autonomy / flexibility / work-life balance</strong> — quyền tự chủ, sự linh hoạt, cân bằng công việc – cuộc sống</li>
+          <li><strong>commute (v/n)</strong> — đi lại hàng ngày · <strong>expenditure</strong> — chi phí</li>
+          <li><strong>collaboration / face-to-face interaction</strong> — sự hợp tác / tương tác trực tiếp</li>
+          <li><strong>productivity / performance / output</strong> — năng suất / hiệu suất / sản lượng</li>
+          <li><strong>blur the boundary between…</strong> — làm mờ ranh giới giữa…</li>
+          <li><strong>feel isolated / disconnected</strong> — cảm thấy cô lập / mất kết nối</li>
+          <li><strong>burnout / mental well-being</strong> — kiệt sức / sức khỏe tinh thần</li>
+          <li><strong>a viable compromise / a middle ground</strong> — một giải pháp thỏa hiệp khả thi</li>
+        </ul>
+
+        <h4 class="sub">2. Cấu trúc ăn điểm</h4>
+        <ul class="clean">
+          <li><em>Not only does … , but it also …</em> (đảo ngữ) — “Not only does remote work save time, but it also reduces stress.”</li>
+          <li><em>While … , …</em> — “While working from home offers flexibility, it may weaken team spirit.”</li>
+          <li><em>It is widely argued that …</em> — “It is widely argued that productivity depends on proximity.”</li>
+          <li><em>Those who advocate … tend to overlook …</em> — “Those who advocate full-time remote work tend to overlook the value of mentoring.”</li>
+          <li><em>… , which in turn leads to …</em> — “Employees gain autonomy, which in turn leads to higher job satisfaction.”</li>
+          <li><em>Given that … , it seems reasonable to …</em> — “Given that both models have merits, it seems reasonable to adopt a hybrid approach.”</li>
+        </ul>
+
+        <h4 class="sub">3. Từ nối theo chức năng</h4>
+        <ul class="clean">
+          <li><strong>Thêm ý:</strong> Furthermore, Moreover, In addition, What is more</li>
+          <li><strong>Đối lập:</strong> However, Nevertheless, Conversely, On the other hand</li>
+          <li><strong>Nguyên nhân – kết quả:</strong> Consequently, As a result, Therefore, Thus</li>
+          <li><strong>Ví dụ:</strong> For instance, To illustrate, A case in point is</li>
+          <li><strong>Kết luận:</strong> In conclusion, To sum up, All things considered</li>
+        </ul>
+      </details>
+
+      <details class="extra is-locked">
+        <summary>🚀 Tips làm Task 2</summary>
+        <div class="tip"><strong>1. Bám sát yêu cầu đề.</strong> Đề có 3 phần: (a) thảo luận quan điểm 1, (b) thảo luận quan điểm 2, (c) nêu ý kiến cá nhân. Bỏ phần (c) sẽ bị trừ điểm Task Achievement rất nặng.</div>
+        <div class="tip"><strong>2. Cấu trúc 4–5 đoạn rõ ràng.</strong> Mỗi đoạn thân bài chỉ nên chứa MỘT ý chính, mở đầu bằng topic sentence, sau đó giải thích – ví dụ – hệ quả.</div>
+        <div class="tip"><strong>3. Công thức phát triển ý P.E.E.</strong> Point (nêu ý) → Explain (giải thích) → Example/Evidence (ví dụ). Đừng chỉ liệt kê ý mà không triển khai.</div>
+        <div class="tip"><strong>4. Đa dạng hoá từ vựng &amp; cấu trúc.</strong> Tránh lặp “good”, “bad”, “important”. Dùng từ đồng nghĩa và ít nhất 2–3 cấu trúc nâng cao (đảo ngữ, câu điều kiện, mệnh đề quan hệ).</div>
+        <div class="tip"><strong>5. Độ dài hợp lý:</strong> 260–300 từ. Viết dưới 250 từ bị trừ điểm; viết quá dài (400+) dễ lan man và mắc lỗi.</div>
+        <div class="tip"><strong>6. Dành 3–4 phút cuối để soát lỗi.</strong> Kiểm tra: chia động từ, số ít/số nhiều, mạo từ, giới từ, và thì của câu.</div>
+        <div class="tip"><strong>7. Đừng học thuộc lòng.</strong> Giám khảo nhận ra ngay các câu mẫu “cứng” và sẽ không tính vào điểm Ngôn ngữ.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= ACTION BAR ================= -->
+  <div class="action-bar">
+    <button id="submitBtn" class="btn btn-primary" type="button" disabled>Nộp bài &amp; Xem điểm</button>
+    <button id="resetBtn" class="btn btn-ghost" type="button">Làm lại</button>
+    <div class="progress">
+      <span class="progress-main">Đã trả lời: <span id="progressCount">0</span>/40</span>
+      <span id="lockStatus" class="lock-status locked">🔒 Cần trả lời đủ 40 câu để nộp</span>
+    </div>
+  </div>
+
+  <!-- ================= RESULT ================= -->
+  <div id="result" class="result"></div>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var TOTAL_QUESTIONS = 40;
+  var submitted = false;
+
+  var submitBtn = document.getElementById("submitBtn");
+  var resetBtn = document.getElementById("resetBtn");
+  var resultBox = document.getElementById("result");
+  var progressCount = document.getElementById("progressCount");
+  var lockStatus = document.getElementById("lockStatus");
+
+  var task1Input = document.getElementById("task1Input");
+  var task2Input = document.getElementById("task2Input");
+  var wordCount1El = document.getElementById("wordCount1");
+  var wordCount2El = document.getElementById("wordCount2");
+
+  /* ---------- Đếm từ ---------- */
+  function countWords(text) {
+    var trimmed = text.trim();
+    if (trimmed === "") return 0;
+    return trimmed.split(/\s+/).length;
+  }
+
+  function updateWordCount(inputEl, metaEl, minWords) {
+    var count = countWords(inputEl.value);
+    metaEl.innerHTML = "<strong>" + count + "</strong> từ";
+    metaEl.classList.remove("ok", "low");
+    if (count >= minWords) {
+      metaEl.classList.add("ok");
+    } else if (count > 0) {
+      metaEl.classList.add("low");
+    }
+  }
+
+  function updateAllWordCounts() {
+    updateWordCount(task1Input, wordCount1El, 120);
+    updateWordCount(task2Input, wordCount2El, 250);
+  }
+
+  task1Input.addEventListener("input", function () {
+    updateWordCount(task1Input, wordCount1El, 120);
+  });
+  task2Input.addEventListener("input", function () {
+    updateWordCount(task2Input, wordCount2El, 250);
+  });
+
+  /* ---------- Khoá / Mở gợi ý ---------- */
+  function lockHints() {
+    var hintBlocks = document.querySelectorAll("details.extra");
+    hintBlocks.forEach(function (el) {
+      el.classList.add("is-locked");
+
+      // Thêm thông báo khoá phía trước nếu chưa có
+      var prev = el.previousElementSibling;
+      if (!prev || !prev.classList.contains("lock-notice")) {
+        var notice = document.createElement("div");
+        notice.className = "lock-notice";
+        notice.innerHTML = '<span class="lock-emoji">🔒</span><strong>Gợi ý bị khoá</strong> — Nội dung hướng dẫn, dàn ý và từ vựng sẽ hiển thị sau khi bạn nộp bài.';
+        el.parentNode.insertBefore(notice, el);
+      }
+    });
+  }
+
+  function unlockHints() {
+    // Mở khoá tất cả details.extra
+    document.querySelectorAll("details.extra.is-locked").forEach(function (el) {
+      el.classList.remove("is-locked");
+    });
+    // Xoá tất cả thông báo khoá
+    document.querySelectorAll(".lock-notice").forEach(function (el) {
+      el.remove();
+    });
+  }
+
+  /* ---------- Tiến độ + trạng thái nút nộp ---------- */
+  function updateProgress() {
+    var answered = document.querySelectorAll('.question input[type="radio"]:checked').length;
+    progressCount.textContent = answered;
+
+    if (submitted) return;
+
+    if (answered >= TOTAL_QUESTIONS) {
+      submitBtn.disabled = false;
+      submitBtn.title = "Sẵn sàng nộp bài!";
+      lockStatus.textContent = "✅ Đã đủ 40 câu — sẵn sàng nộp";
+      lockStatus.classList.remove("locked");
+      lockStatus.classList.add("ready");
+    } else {
+      submitBtn.disabled = true;
+      submitBtn.title = "Cần trả lời đủ " + TOTAL_QUESTIONS + " câu hỏi để nộp bài.";
+      var remaining = TOTAL_QUESTIONS - answered;
+      lockStatus.textContent = "🔒 Còn thiếu " + remaining + " câu — chưa thể nộp";
+      lockStatus.classList.remove("ready");
+      lockStatus.classList.add("locked");
+    }
+  }
+
+  document.addEventListener("change", function (e) {
+    if (e.target && e.target.type === "radio") {
+      updateProgress();
+    }
+  });
+
+  /* ---------- Nộp bài ---------- */
+  function submitQuiz() {
+    if (submitted) return;
+
+    var answered = document.querySelectorAll('.question input[type="radio"]:checked').length;
+    if (answered < TOTAL_QUESTIONS) {
+      alert("Bạn cần trả lời đủ " + TOTAL_QUESTIONS + " câu hỏi trước khi nộp bài. Hiện tại bạn mới trả lời " + answered + "/" + TOTAL_QUESTIONS + " câu.");
+      return;
+    }
+
+    submitted = true;
+
+    var questions = document.querySelectorAll(".question");
+    var score = 0;
+    var unanswered = 0;
+
+    questions.forEach(function (question) {
+      var correctAnswer = question.dataset.answer;
+      var selected = question.querySelector('input[type="radio"]:checked');
+      var options = question.querySelectorAll(".option");
+
+      // Tô xanh đáp án đúng
+      options.forEach(function (option) {
+        var input = option.querySelector("input");
+        if (input.value === correctAnswer) {
+          option.classList.add("correct");
+        }
+      });
+
+      if (!selected) {
+        unanswered++;
+        question.classList.add("is-wrong");
+      } else if (selected.value === correctAnswer) {
+        score++;
+        question.classList.add("is-correct");
+      } else {
+        question.classList.add("is-wrong");
+        selected.closest(".option").classList.add("wrong");
+      }
+
+      // Hiện giải thích
+      var explanation = question.querySelector(".explanation");
+      if (explanation) {
+        explanation.hidden = false;
+      }
+
+      // Khoá lựa chọn
+      question.querySelectorAll('input[type="radio"]').forEach(function (input) {
+        input.disabled = true;
+      });
+    });
+
+    // Mở khoá tất cả gợi ý
+    unlockHints();
+
+    var task1Words = countWords(task1Input.value);
+    var task2Words = countWords(task2Input.value);
+    showResult(score, unanswered, task1Words, task2Words);
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Đã nộp bài";
+    submitBtn.title = "";
+    lockStatus.textContent = "✅ Đã nộp bài — gợi ý đã được mở khoá";
+    lockStatus.classList.remove("locked");
+    lockStatus.classList.add("ready");
+
+    resultBox.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  /* ---------- Hiển thị kết quả ---------- */
+  function showResult(score, unanswered, task1Words, task2Words) {
+    var percent = Math.round((score / TOTAL_QUESTIONS) * 100);
+    var verdict = "";
+    var advice = "";
+
+    if (percent >= 90) {
+      verdict = "Xuất sắc — Trình độ B2 vững vàng!";
+      advice = "Bạn đã sẵn sàng cho phần Reading & Use of English của kỳ thi VSTEP B2. Hãy tiếp tục luyện tốc độ làm bài.";
+    } else if (percent >= 70) {
+      verdict = "Khá tốt — Đạt chuẩn B2!";
+      advice = "Nền tảng của bạn khá chắc. Hãy xem kỹ phần giải thích của những câu sai để tránh lặp lại lỗi tương tự.";
+    } else if (percent >= 50) {
+      verdict = "Trung bình — Cần củng cố thêm.";
+      advice = "Bạn nên ôn lại các chuyên đề ngữ pháp như 12 thì, bị động, tường thuật và word form, đồng thời luyện đọc hiểu để tăng tốc độ.";
+    } else {
+      verdict = "Cần nỗ lực nhiều hơn.";
+      advice = "Hãy quay lại học từ vựng theo chủ đề và các cấu trúc ngữ pháp trọng tâm trước khi làm đề tiếp theo. Đọc lại đoạn văn và phần giải thích thật kỹ nhé!";
+    }
+
+    // Nhận xét Task 1
+    var task1Note = "";
+    if (task1Words === 0) {
+      task1Note = "✉️ Task 1: bạn chưa viết bài.";
+    } else if (task1Words < 120) {
+      task1Note = "✉️ Task 1: " + task1Words + " từ — còn dưới mức tối thiểu 120 từ. Cần viết thêm.";
+    } else {
+      task1Note = "✉️ Task 1: " + task1Words + " từ — đạt yêu cầu độ dài. 👏";
+    }
+
+    // Nhận xét Task 2
+    var task2Note = "";
+    if (task2Words === 0) {
+      task2Note = "📝 Task 2: bạn chưa viết bài luận.";
+    } else if (task2Words < 250) {
+      task2Note = "📝 Task 2: " + task2Words + " từ — còn dưới mức tối thiểu 250 từ. Cần viết thêm.";
+    } else {
+      task2Note = "📝 Task 2: " + task2Words + " từ — đạt yêu cầu độ dài. 👏";
+    }
+
+    var html = "";
+    html += '<h3>📊 Kết quả bài làm</h3>';
+    html += '<p class="score-line">' + score + '/40 <small>(' + percent + '%)</small></p>';
+    html += '<div class="breakdown">';
+    html += '<span class="chip">✅ Đúng: ' + score + '</span>';
+    html += '<span class="chip">❌ Sai: ' + (TOTAL_QUESTIONS - score - unanswered) + '</span>';
+    html += '<span class="chip">⬜ Bỏ trống: ' + unanswered + '</span>';
+    html += '<span class="chip">✉️ Task 1: ' + task1Words + ' từ</span>';
+    html += '<span class="chip">📝 Task 2: ' + task2Words + ' từ</span>';
+    html += '</div>';
+    html += '<p style="margin-top:12px;">' + advice + '</p>';
+    html += '<p>' + task1Note + '</p>';
+    html += '<p>' + task2Note + '</p>';
+    html += '<span class="verdict">' + verdict + '</span>';
+    html += '<div class="unlock-note">🔓 Tất cả gợi ý, dàn ý, từ vựng và giải thích chi tiết đã được mở khoá bên dưới mỗi câu hỏi.</div>';
+
+    resultBox.innerHTML = html;
+    resultBox.classList.add("show");
+  }
+
+  /* ---------- Làm lại ---------- */
+  function resetQuiz() {
+    submitted = false;
+
+    document.querySelectorAll(".question").forEach(function (question) {
+      question.classList.remove("is-correct", "is-wrong", "is-missing");
+
+      question.querySelectorAll('input[type="radio"]').forEach(function (input) {
+        input.disabled = false;
+        input.checked = false;
+      });
+
+      question.querySelectorAll(".option").forEach(function (option) {
+        option.classList.remove("correct", "wrong");
+      });
+
+      var explanation = question.querySelector(".explanation");
+      if (explanation) {
+        explanation.hidden = true;
+      }
+    });
+
+    resultBox.classList.remove("show");
+    resultBox.innerHTML = "";
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Nộp bài & Xem điểm";
+    submitBtn.title = "Cần trả lời đủ 40 câu hỏi để nộp bài.";
+
+    // Xoá hết lock notice cũ, rồi khoá lại toàn bộ gợi ý
+    document.querySelectorAll(".lock-notice").forEach(function (el) { el.remove(); });
+    lockHints();
+
+    updateProgress();
+    updateAllWordCounts();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  /* ---------- Gắn sự kiện ---------- */
+  submitBtn.addEventListener("click", submitQuiz);
+  resetBtn.addEventListener("click", resetQuiz);
+
+  /* ---------- Khởi tạo ---------- */
+  lockHints();          // khoá toàn bộ gợi ý ban đầu
+  updateProgress();     // cập nhật trạng thái nút nộp
+  updateAllWordCounts();
+})();
+</script>
+</body>
+</html>
